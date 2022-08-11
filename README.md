@@ -1,0 +1,2 @@
+# SJSU_Art_101_F22_02
+SJSU Art 101 Fall 2022 Section 02
