@@ -1,10 +1,21 @@
-let mic;
+//ART101 Node1.1
+//By Jiatao Xu
+
+
+//trying something new for my avatar
+//Move the slider to change the amount of segments
+
+let slider;
 
 function setup() {
-  let cnv = createCanvas(windowWidth, windowHeight);
-  cnv.mousePressed(userStartAudio);
-  mic = new p5.AudioIn();
-  mic.start();
+  createCanvas(windowWidth, windowHeight);
+  
+  
+  //slider setup
+  slider = createSlider(5, 100, 100);
+  slider.position(width/2, height/2+0.2*height);
+  slider.style('width', '80px');
+ 
   
   
 
@@ -16,8 +27,11 @@ function draw() {
   //background('rgba(255,255,255,0.01)');
   background(255);
   
-  micLevel = mic.getLevel();
-  hairAmount= round(micLevel*50)+3;
+  rectMode(RADIUS);
+  fill(0);
+  rect(width/2+0.04*width, height/2+0.21*height,50,20);
+  
+  segAmt = slider.value();
   
   
   posX = width/2;
@@ -30,15 +44,15 @@ function draw() {
   
   fill(255);
   let count = 0;
-  for (let i = 0; i <= 2*PI-QUARTER_PI; i += PI/hairAmount){
+  for (let i = 0; i <= 2*PI-QUARTER_PI; i += PI/segAmt*2){
     
-    if(micLevel <= 0.1){
+    if(segAmt <= 50){
       fill('#DBB88D');
     } 
-    else if(micLevel >= 0.11 && micLevel <= 0.25){
+    else if(segAmt >= 50 && segAmt <= 80){
       fill('#EB2D75');
     }
-    else if(micLevel > 0.25){
+    else if(segAmt > 80){
       fill(random(255),random(255),random(255));
     }
     
