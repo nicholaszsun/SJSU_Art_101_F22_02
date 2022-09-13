@@ -8,9 +8,7 @@
 //  1.0 graphic
 //  1.2 mouth reflect surrouding noise
 //  1.3 head follow mouse movement
-//  1.4 eyeshut at certain random time interval range
 
-//crtl + F for each version number for related codes.
 
 
 
@@ -68,7 +66,7 @@ function draw() {
   drawLegFront(body);
   
   drawFaceAndFollow();
-  eyeShut();
+
   
   
   
@@ -99,27 +97,12 @@ function drawFaceAndFollow(){
     }
   }
   translate(deltaX, deltaY);
-  drawEye(eye, openValue);
+  drawEye(eye, 1);
   drawMouth(micLevel);
   drawMole();
   pop();
 }
 
-//1.4 Update
-function eyeShut(){
-
-  //eyeShut at time interval
-  deltaT +=1;
-  if (deltaT == eyeShutIntv){
-      openValue = 0;
-      
-  }
-  if (deltaT == eyeShutIntv+10){
-    openValue = 1;
-    deltaT = 0;
-    eyeShutIntv = round(random(200,300));
-  }
-}
 
 
 function drawEye(color, openVal){
