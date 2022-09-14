@@ -1,13 +1,9 @@
+//WAH!
 function setup() {
   createCanvas(1000, 1000);
   background(233, 230, 252);
-  let value=0;
   mic = new p5.AudioIn();
   mic.start();
-  
-  
-  
-  
 }
 
 
@@ -33,6 +29,7 @@ function draw() {
   earL();
   tent();
  
+  
 //ADD EAR ROTATION BASED ON MOUSE TOUCH
   
   let brow = map(vol, 0, 1, height/2, 30);
@@ -51,43 +48,33 @@ function draw() {
   mouth();
   
   //Details
-  blush();
-  eyes_open();
+  eyes();
 
-}
+ if (mouseIsPressed == true) {
+  fill(b);
+
+   } else{
+     fill(t)
+   }
+  ellipse(i+180, j+140, 150, 50);
+  ellipse(i-180, j+140, 150, 50);
+
+
+//Functions
 function browL(){
-  let i= width/2;
-    let j= height/2;
-    let t= color(114, 91, 143);
-    let t1= color (76, 50, 89);
-    let h= color(255, 206, 122);
-    let e= color(57, 57, 66);
-    noStroke();
+
     rect(i+80, brow, 150, 20);
   
 }
 
 function browR(){
-  let i= width/2;
-    let j= height/2;
-    let t= color(114, 91, 143);
-    let t1= color (76, 50, 89);
-    let h= color(255, 206, 122);
-    let e= color(57, 57, 66);
-    noStroke();
+
     rect(i-230, brow, 150, 20);
   
 }
 
 function halo(){
-    let i= width/2;
-    let j= height/2;
-    let t= color(114, 91, 143);
-    let t1= color (76, 50, 89);
-    let h= color(255, 206, 122);
-    let e= color(57, 57, 66);
-    noStroke();
-    //Halo
+  noStroke();
   push();
   fill(h);
   ellipse(i, 100, 500,150);
@@ -97,15 +84,6 @@ function halo(){
 }
 
 function base(){
-    let i= width/2;
-    let j= height/2;
-    let t= color(114, 91, 143);
-    let t1= color (76, 50, 89);
-    let h= color(255, 206, 122);
-    let e= color(57, 57, 66);
-    noStroke();
-  
-  //Base
   push();
   fill(t1);
   ellipse(i+100, j+300, 200, 230);
@@ -118,29 +96,11 @@ function base(){
 }
 
 function earR(){
-    let i= width/2;
-    let j= height/2;
-    let t= color(114, 91, 143);
-    let t1= color (76, 50, 89);
-    let h= color(255, 206, 122);
-    let e= color(57, 57, 66);
-    noStroke();
-  
-  //Ears
   fill(t);
-
   ellipse(i-200,j-200, 300,80);
   }
 
 function earL(){
-    let i= width/2;
-    let j= height/2;
-    let t= color(114, 91, 143);
-    let t1= color (76, 50, 89);
-    let h= color(255, 206, 122);
-    let e= color(57, 57, 66);
-    noStroke();
-  
   push();
   rotate(-.22*PI/3.0);
   fill(t);
@@ -150,15 +110,6 @@ function earL(){
   }
 
 function tent(){
-  let i= width/2;
-  let j= height/2;
-  let t= color(114, 91, 143);
-  let t1= color (76, 50, 89);
-  let h= color(255, 206, 122);
-  let e= color(57, 57, 66);
-noStroke();
-  
-  //Tentecles
   fill(t);
   ellipse(i+200, j+300, 200, 300);
   ellipse(i, j+300, 200, 300);
@@ -167,15 +118,6 @@ noStroke();
   }
 
 function mouth_open(){
-    let i= width/2;
-  let j= height/2;
-  let t= color(114, 91, 143);
-  let t1= color (76, 50, 89);
-  let h= color(255, 206, 122);
-  let e= color(57, 57, 66);
-  noStroke();
-    
-  //Mouth
   push();
   fill(227, 91, 120);
   rect(i-60,j+80, 120,40);
@@ -195,15 +137,6 @@ function mouth_open(){
 }
 
 function mouth(){
-  let i= width/2;
-  let j= height/2;
-  let t= color(114, 91, 143);
-  let t1= color (76, 50, 89);
-  let h= color(255, 206, 122);
-  let e= color(57, 57, 66);
-  noStroke();
-    
-  //Mouth
   push();
   fill(e);
   ellipse(i+60, j+80, 120, 70);
@@ -218,15 +151,7 @@ function mouth(){
 }
 
 function blush(){
-  let i= width/2;
-  let j= height/2;
-  let t= color(114, 91, 143);
-  let t1= color (76, 50, 89);
-  let h= color(255, 206, 122);
-  let e= color(57, 57, 66);
-  let b= color(255, 143, 165);
-  noStroke();
-  //Blush
+
   push();
   fill(b);
   ellipse(i+180, j+140, 150, 50);
@@ -235,15 +160,7 @@ function blush(){
 }
 
 function eyes(){
-  let i= width/2;
-  let j= height/2;
-  let t= color(114, 91, 143);
-  let t1= color (76, 50, 89);
-  let h= color(255, 206, 122);
-  let e= color(57, 57, 66);
-  noStroke();
-  
-  ///Eyes
+
   push();
   fill(e)
   ellipse(i-160,j+50, 150,10);
@@ -255,16 +172,9 @@ function eyes(){
 }
 
 function eyes_open(){
-  let i= width/2;
-  let j= height/2;
-  let t= color(114, 91, 143);
-  let t1= color (76, 50, 89);
-  let h= color(255, 206, 122);
-  let e= color(57, 57, 66);
-  noStroke();
-  
-  ///Eyes
+
   push();
+  noStroke();
   stroke(e);
   strokeWeight(5);
   fill(999)
@@ -273,20 +183,15 @@ function eyes_open(){
   fill(e);
   ellipse(i-160,j+50, 60,30);
   ellipse(i+160,j+50, 60,30);
+  noStroke();
+  fill(b);
+  ellipse(i+180, j+140, 150, 50);
+  ellipse(i-180, j+140, 150, 50);
   pop();
 }
 
-function mouseClicked(){
-  if (value ===0){
-    value = 1;
-  }else{
-    value = 0;
-  }
-  }
-function mouseClicked(){
-  ellipse(mouseX, mouseY, 5, 5);
-  return false;
-  
 }
 
-  
+
+
+
