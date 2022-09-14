@@ -7,6 +7,7 @@
 //feature list:
 //  1.0 graphic
 //  1.2 mouth reflect surrouding noise
+//  1.3 head follow mouse movement
 
 
 
@@ -64,13 +65,43 @@ function draw() {
   drawBody(body,horn);
   drawLegFront(body);
   
-  drawEye(255,1);
-  drawMouth(micLevel*5);
-  drawMole();
+  drawFaceAndFollow();
+
+  
   
   
 }
 
+//1.3 Update
+function drawFaceAndFollow(){
+  push();
+  if (mouseX/gridX > 2.35){
+    if (deltaX < 0.25*gridX){
+      deltaX += 0.03*gridX;
+    }
+  }
+  else if (mouseX/gridX < 2.35) {
+    if (deltaX > -0.15*gridX){
+      deltaX -= 0.03*gridX;
+    }
+  }
+  
+  if (mouseY/gridY > 4.23){
+    if(deltaY < 0.25*gridY){
+      deltaY += 0.03*gridY;
+    }
+  }
+  else if (mouseY/gridY < 4.23){
+    if(deltaY > -0.25*gridY){
+      deltaY -= 0.03*gridY;
+    }
+  }
+  translate(deltaX, deltaY);
+  drawEye(eye, 1);
+  drawMouth(micLevel);
+  drawMole();
+  pop();
+}
 
 
 

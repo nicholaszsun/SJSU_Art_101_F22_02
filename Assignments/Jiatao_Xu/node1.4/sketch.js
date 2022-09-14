@@ -7,7 +7,10 @@
 //feature list:
 //  1.0 graphic
 //  1.2 mouth reflect surrouding noise
+//  1.3 head follow mouse movement
+//  1.4 eyeshut at certain random time interval range
 
+//crtl + F for each version number for related codes.
 
 
 
@@ -64,14 +67,59 @@ function draw() {
   drawBody(body,horn);
   drawLegFront(body);
   
-  drawEye(255,1);
-  drawMouth(micLevel*5);
-  drawMole();
+  drawFaceAndFollow();
+  eyeShut();
+  
   
   
 }
 
+//1.3 Update
+function drawFaceAndFollow(){
+  push();
+  if (mouseX/gridX > 2.35){
+    if (deltaX < 0.25*gridX){
+      deltaX += 0.03*gridX;
+    }
+  }
+  else if (mouseX/gridX < 2.35) {
+    if (deltaX > -0.15*gridX){
+      deltaX -= 0.03*gridX;
+    }
+  }
+  
+  if (mouseY/gridY > 4.23){
+    if(deltaY < 0.25*gridY){
+      deltaY += 0.03*gridY;
+    }
+  }
+  else if (mouseY/gridY < 4.23){
+    if(deltaY > -0.25*gridY){
+      deltaY -= 0.03*gridY;
+    }
+  }
+  translate(deltaX, deltaY);
+  drawEye(eye, openValue);
+  drawMouth(micLevel);
+  drawMole();
+  pop();
+}
 
+//1.4 Update
+function eyeShut(){
+
+  //eyeShut at time interval
+  deltaT +=1;
+  if (deltaT == eyeShutIntv){
+      openValue = 0;
+      
+  }
+  if (deltaT == eyeShutIntv+10){
+    openValue = 1;
+    deltaT = 0;
+    eyeShutIntv = round(random(200,300));
+  }
+}
 
 
 function drawEye(color, openVal){
