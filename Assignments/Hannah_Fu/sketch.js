@@ -13,8 +13,16 @@ function draw() { //face
   angleMode(DEGREES);
 }
 
-function draw() { //face
+function draw() { 
+  let x = mouseX;
+  let y = mouseY;
+  let ix = width - mouseX;  // Inverse X
+  let iy = height - mouseY; // Inverse Y
   background(240, 234, 218);
+   fill(255, 249, 240, 100);
+  ellipse(x, height/2, y, y);
+  fill(201, 193, 177, 100);
+  ellipse(ix, height/2, iy, iy);
   backhair();
  // body();
   rightLeg();
@@ -265,4 +273,3 @@ function eyebrows(){
   ellipse(width/2.23, height/3.2,30,5)
   ellipse(width/1.75, height/3.2,30,5)
 }
-
