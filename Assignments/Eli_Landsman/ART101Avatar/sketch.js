@@ -9,7 +9,7 @@ let back = []
 
 function setup() {
   
-  cnv = createCanvas(windowWidth, windowHeight);
+  cnv = createCanvas(870, 835);
   cnv.mousePressed(userStartAudio);
   mic = new p5.AudioIn();
   mic.start();
@@ -18,7 +18,7 @@ function setup() {
   
   //(_xpos,_ypos,_rot,_size, _speed){
   for(let i = 0; i <= 20; i++){
-  back[i] = new Ovals(random(1,1000), random(1,100), random(360), random(1,5), random(1,20/10));
+  back[i] = new Ovals(random(1,1000), random(1,100), random(360), random(1,5), random(5,20));
 
   }
 }
@@ -67,7 +67,7 @@ function draw() {
 //Right Foot
   rfoot(1.843, 1.14, 1.48, 1.23, 1.48, 1.14)
 //Left Foot
-  lfoot(g, 1.14, g, 1.23, j, 1.14)
+  lfoot(2.18, 1.14, 2.18, 1.23, 3.2, 1.14)
   
                              //BODY
   body(g, 2.66, 4,3.07);
@@ -98,10 +98,12 @@ function draw() {
   bodyshadow(2.63, 2.63, 30.76,3.2);
   
              
+   
   
                        //BugEyes
   miceyes(2.4242,5.33, m*2); 
   miceyes(1.63,5.33, m*2); 
+  
       
                           //Highlights
   highlights(2.312, 5.882, 30);
@@ -185,7 +187,7 @@ function lfoot(xpos1, ypos1, wpos2, hpos2,wpos3,hpos3){
   //lfoot
   fill(t);
   stroke(1);
-  triangle(xpos1, height/ypos1, wpos2, height/hpos2, wpos3, height/hpos3);
+  triangle(width/xpos1, height/ypos1, width/wpos2, height/hpos2, width/wpos3, height/hpos3);
 }
   
 function head(xpos,ypos,wpos,hpos){
@@ -232,9 +234,7 @@ function faceshadow(xpos, ypos, wpos, hpos,xpos1,xpos2){
 function miceyes(posx, posy, size){
   push();
   fill(0);
-  ellipseMode(CENTER);
-ellipse (width/posx, height/posy, m);
-  if(mouseX > width/3.04 && 
+    if(mouseX > width/3.04 && 
       mouseX < width/1.43  &&
       mouseY > height/20 &&
       mouseY < height/3.07 && mouseIsPressed){
@@ -243,6 +243,8 @@ ellipse (width/posx, height/posy, m);
              mouseX > width/1.43 &&
              mouseY < height/20 &&
              mouseY > height/3.07);
+  ellipseMode(CENTER);
+ellipse (width/posx, height/posy, m);
   pop();
   
 }
@@ -326,7 +328,14 @@ function chin(posx,posy,posw,posh){
   arc(width/posx, height/posy, width/posw, height/posh, 0, HALF_PI, PI);
   pop();
 }
+  
+  if (mouseIsPressed === true){
+    console.log(+mouseX, +mouseY)
+  }
+     
+     
+     
 
   
   
-  }
+}

@@ -1,4 +1,3 @@
-ovals.js
 
 class Ovals{
   constructor(_xpos,_ypos,_rot,_size, _speed){
@@ -15,10 +14,12 @@ class Ovals{
   scale(this.size);
   strokeWeight(3);
   stroke(255);
+    //blue
   fill(150, 200, 255);
-  ellipse(width/3, height/3, width/6, height/6);
+  ellipse(width/6, height/6, width/18, height/18);
+    //white
   fill(255);
-  ellipse(width/1.5, height/1.5, width/10, height/10);
+  ellipse(width/6, random(), 3, height/10);
     pop();
   }
 
