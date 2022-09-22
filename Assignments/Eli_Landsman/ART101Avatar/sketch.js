@@ -6,7 +6,7 @@ let i;
 let count = 35;
 toggle = true;
 let back = []
-
+let speed;
 function setup() {
   
   cnv = createCanvas(870, 835);
@@ -67,7 +67,7 @@ function draw() {
 //Right Foot
   rfoot(1.843, 1.14, 1.48, 1.23, 1.48, 1.14)
 //Left Foot
-  lfoot(2.18, 1.14, 2.18, 1.23, 3.2, 1.14)
+  lfoot(2.68, 1.14, 2.68, 1.23, 2, 1.14)
   
                              //BODY
   body(g, 2.66, 4,3.07);
@@ -121,20 +121,29 @@ function draw() {
   if(count == 60 || count == 40){
     toggle = !toggle;
   }
+
+
   if (toggle == true){
     count = count + 1
   }else if(toggle == false){
-    count = count - 1;
+    count = count - 1
   }
   
   if (toggle == true && count == 40){
     count = count + 1
   }
+    if(toggle == true && count <= 50){
+    count = count + 1
+  }
+  else if(toggle == false && count >=50){
+    count = count - 1
+  }
+  
   // //Frame Animation
   // if (count >= 46){
   //   frameRate(20)
   // } else if(frameRate(60))
-  // // console.log(count);
+// console.log(count);
   
  
   
