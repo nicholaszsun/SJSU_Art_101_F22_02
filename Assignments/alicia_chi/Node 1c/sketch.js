@@ -9,6 +9,7 @@ function draw() {
 let i= width/2;
 let j= height/2;
 let t= color(114, 91, 143);
+let t1= color (76, 50, 89);
 let h= color(255, 206, 122);
 let e= color(57, 57, 66);
 noStroke();
@@ -22,18 +23,15 @@ noStroke();
    
   
   //Base
-
+  fill(t1)
+  ellipse(i+100, j+300, 200, 230);
+   ellipse(i-100, j+300, 200, 230);
   fill(t);
   ellipse(i,j, 600, 600) ;
   rect(i,j, -300, 300 );
   rect(i,j, 300, 300);
   ellipse(i+200,j-200, 300,80);
-   ellipse(i-200,j-200, 300,80);
-  
-
-
-  ///Tenticles
-  
+  ellipse(i-200,j-200, 300,80);
   fill(t);
   ellipse(i+200, j+300, 200, 300);
   ellipse(i, j+300, 200, 300);
@@ -47,9 +45,15 @@ noStroke();
   arc(i, j+120, 120, 120, 0, PI);
   fill(900);
   triangle(i+12,j+60,i+45,j+120,i+60,j+85);
+  fill(e);
+  ellipse(i+60, j+80, 120, 70);
+  ellipse(i-60, j+80, 120, 70);
+    
   fill(t);
   ellipse(i+60, j+70, 120, 60);
   ellipse(i-60, j+70, 120, 60);
+  rect(i-180,j+80, 120,40);
+  rect(i+60,j+80, 120,40);
     
 
   

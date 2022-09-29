@@ -1,0 +1,201 @@
+function setup() {
+    background(220);
+   createCanvas(700, 380);
+   let cnv = createCanvas(windowWidth, windowHeight);
+     cnv.mousePressed(userStartAudio);
+   mic = new p5.AudioIn();
+   mic.start();
+   angleMode(DEGREES);
+   colorMode(RGB, width);
+   a = 0;
+   b = width;
+   direction = true;
+   frameRate(100);
+ }
+ 
+ 
+ 
+ 
+ function draw() {  
+   let n = width/2
+   let j = height/2
+     
+ 
+ gradient();
+   
+ leftarm();
+   
+ head ();
+  
+   leg ();
+   
+   neck ();
+   
+   face();
+ 
+   toe();
+   
+   torso();
+   
+   recolor();
+   
+    micLevel = mic.getLevel();
+   let y = micLevel*400;
+   
+   valOne = random (width);
+   valTwo = random (height);
+   
+   //console.log(y)
+   
+   mouth();
+   
+   rightarm();
+ 
+   switches(); 
+ }
+ 
+ function gradient(){
+   a++;
+   if (a > width) {
+     a = 0;
+     direction = !direction;
+   }
+   if (direction === true) {
+     stroke(a);
+   } else {
+     stroke(width - a);
+   }
+   line(a, 0, a, height / 2);
+ 
+   b--;
+   if (b < 0) {
+     b = width;
+   }
+   if (direction == true) {
+     stroke(width - b);
+   } else {
+     stroke(b);
+   }
+   line(b, height / 2 + 1, b, height);
+ }
+ 
+ function mouth(){
+   fill ('#000000')
+  ellipse (height/2+124, width/2-165,20,mic.getLevel()*400);
+   
+   }
+ 
+ function windowResize(){
+   resizeCanvas(windowWidth, windowHeight);
+ }
+ 
+ function face(){
+     fill('rgb(0,0,0)');
+   rect(width/2+15, 135, 8, 20, 20);
+   rect(width/2+54, 135, 8, 20, 20);
+ rect(width/2+10, 134, 15, 1, 20);
+   rect(width/2+50, 134, 15, 1, 20)
+ }
+ 
+ function toe(){
+   fill('#F44336')
+   rect(width/2+41, 303, 33, 28);
+   rect(width/2+1, 303, 33, 28);
+ }
+ 
+ function torso(){
+   fill('rgb(0,0,255)')
+ rect(width/2+3, 190, 70, 70,8);
+ }
+ 
+ function neck() {
+     fill('#FFEB3B')
+ rect(width/2+14, 180, 50, 9, 2);
+ }
+ 
+ function leg () {
+    fill('#F44336')
+ rect(width/2+2, 250, 32, 80, 20);
+ rect(width/2+41, 250, 32, 80, 20);
+   rect(width/2+3, 247, 70, 20, 20);
+ }
+ 
+ function leftarm () {
+   fill('#FFEB3B')
+   rect(width/2-38, 190, 40, 70, 10);
+ }
+ 
+ function rightarm(){
+ push();
+   translate(windowWidth/1.64,windowHeight/2.61,)
+   rotate(mouseY)
+   fill('#FFEB3B')  
+   rect(0,0, 40, 70, 10);
+   pop();
+ }
+ 
+ function head () {
+   fill('#FFEB3B')
+   rect(width/2+27, 90, 25, 50, 6);
+   rect(width/2, 100, 80, 80, 20);
+ }
+ 
+ function recolor() {
+   if ((mouseX <= 50) && (mouseY <= 50)) {
+     fill('#DB24B1')
+ rect(width/2+2, 250, 32, 80, 20);
+ rect(width/2+41, 250, 32, 80, 20);
+   rect(width/2+3, 247, 70, 20, 20); 
+     rect(width/2+41, 303, 33, 28);
+   rect(width/2+1, 303, 33, 28);
+     fill('#24DB4E')
+ rect(width/2+3, 190, 70, 70,8); 
+     // Upper-left
+   }
+   else if ((mouseX <= 50) && (mouseY > 50)) {
+        fill('rgb(0,0,255)')
+ rect(width/2+2, 250, 32, 80, 20);
+ rect(width/2+41, 250, 32, 80, 20);
+   rect(width/2+3, 247, 70, 20, 20); 
+         rect(width/2+41, 303, 33, 28);
+   rect(width/2+1, 303, 33, 28);
+     fill('#F44336')
+ 
+ rect(width/2+3, 190, 70, 70,8); 
+   // Lower-left
+   }
+   else if ((mouseX > 50) && (mouseY <= 50)) {
+    fill('#A76518')
+ rect(width/2+2, 250, 32, 80, 20);
+ rect(width/2+41, 250, 32, 80, 20);
+   rect(width/2+3, 247, 70, 20, 20); 
+         rect(width/2+41, 303, 33, 28);
+   rect(width/2+1, 303, 33, 28);
+     fill('#21DEE6')
+ rect(width/2+3, 190, 70, 70,8); 
+   // Upper-right
+   }
+   else {
+     fill('#B2A44D')
+ rect(width/2+2, 250, 32, 80, 20);
+ rect(width/2+41, 250, 32, 80, 20);
+   rect(width/2+3, 247, 70, 20, 20); 
+         rect(width/2+41, 303, 33, 28);
+   rect(width/2+1, 303, 33, 28);
+     fill('#7224DB')
+ rect(width/2+3, 190, 70, 70,8); 
+   // Lower-right
+   }
+ }
+ 
+ function switches(){
+ fill('#24DB4E')
+   rect(0, 0, 50, 50);   // Upper-left
+   fill('#F44336')
+     rect(0, 50, 50, 50);  // Lower-left
+   fill('#21DEE6')
+     rect(50, 0, 50, 50);  // Upper-right
+   fill('#7224DB')
+     rect(50, 50, 50, 50); // Lower-right
+ }
+ 
