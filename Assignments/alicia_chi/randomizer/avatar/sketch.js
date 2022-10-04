@@ -33,6 +33,7 @@ function setup() {
     confetti[i] = new Confetti(random(width), random(height * -1.2, height * -.1), random(-90, 90));
   }
   
+  createButton("Start");
 
 }
 
