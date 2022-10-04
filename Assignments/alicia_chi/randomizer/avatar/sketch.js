@@ -32,14 +32,14 @@ function setup() {
     confetti[i] = new Confetti(random(width), random(height * -1.2, height * -.1), random(-90, 90));
   }
   
-  createButton("Start").mouseIsPressed(startSketch);
+  createButton("Start")
+  button.mousePressed('startSketch');
 
 }
 
 function startSketch(){
   mic = new p5.AudioIn();
   mic.start();
-
   sketchStarted = true;
 }
 
@@ -52,13 +52,11 @@ function draw() {
   let h= color(255, 206, 122);
   let e= color(57, 57, 66);
   let b= color(255, 143, 165);
-
   let vol = mic.getLevel()*1.2;
   let vol1 = mic.getLevel();
   let vol_mouth = mic.getLevel()*-1.5; 
 
   if(sketchStarted){
-
 
     for (let i = 0; i < confetti.length / 2; i++) {
       confetti[i].confettiDisplay();
