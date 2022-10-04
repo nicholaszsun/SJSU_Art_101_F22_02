@@ -6,14 +6,14 @@ let myMap=0;
 let hight=0;
 
 function setup() {
- background(0);
+ //background(0);
  let cnv = createCanvas(400, 400);
 cnv.mousePressed(userStartAudio);
 mic = new p5.AudioIn();
   mic.start();
 }
 function draw() {
- background(0);
+ //background(0);
  light();
  hair();
  face();
