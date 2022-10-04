@@ -6,7 +6,7 @@ let x,y;
 var moves= .6;
 let tryOne;
 let tryTwo;
-let sketchStarted = flase;
+let sketchStarted = false;
 
 //WAH!
 function setup() {
