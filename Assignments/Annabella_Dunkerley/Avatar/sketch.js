@@ -14,7 +14,7 @@ function setup() {
   
 frameRate (30);
   
-  detailOne = new detail(56, 46, 55, 55);
+ // detailOne = new detail(56, 46, 55, 55);
   
   
   
