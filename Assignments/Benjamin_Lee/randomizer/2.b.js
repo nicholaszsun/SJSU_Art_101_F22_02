@@ -1,4 +1,4 @@
-let cats = ["Lisa", "Kiki", "Donut", "Sprinkle", "Swiper", "Luna", "Titan", "Keyoh"]; 
+let cats = ["Lisa", "Kiki", "Donut", "Sprinkle", "Swiper", "Luna", "Titan", "Keyoh"]; //0-8
 
 let randomIndex
 
