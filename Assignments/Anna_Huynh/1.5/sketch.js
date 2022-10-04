@@ -13,7 +13,7 @@ let seedNine;
 let seedTen;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1000,1000);
   
   mic = new p5.AudioIn()
   mic.start()
@@ -209,7 +209,7 @@ function tufts(){
 
 function leg(){
   fill(235, 161, 70)
-  rect(mouseX+5, mouseY+5, width/35, windowHeight)
+  rect(mouseX+5, mouseY+5, width/50, windowHeight)
   beginShape()
   vertex(mouseX+5, mouseY+5)
   vertex(mouseX-5, mouseY-50)
