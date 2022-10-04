@@ -6,14 +6,14 @@ let x,y;
 var moves= .6;
 let tryOne;
 let tryTwo;
-let sketchStarted = flase;
+let sketchStarted = false;
 
 //WAH!
 function setup() {
   createCanvas(1000, 1000);
   background(233, 230, 252);
 
-  
+  createButton("Start").mousePressed(startSketch);
   confettiColor = [color('#00aeef'), color('#ec008c'), color('#72c8b6')];
   for (let i = 0; i < 100; i++) {
     confetti[i] = new Confetti(random(0, width), random(-height, 0), random(-1, 1));
@@ -32,31 +32,33 @@ function setup() {
     confetti[i] = new Confetti(random(width), random(height * -1.2, height * -.1), random(-90, 90));
   }
   
-  createButton("Start").mousePressed(startSketch);
+  function startSketch(){
+    mic = new p5.AudioIn();
+    mic.start();
+  
+    sketchStarted = true;
+  }
+ 
 
 }
 
-function startSketch(){
-  mic = new p5.AudioIn();
-  mic.start();
-
-  sketchStarted = true;
-}
 
 function draw() {
-  background(233, 230, 252);
-  let i= width/2;
-  let j= height/2;
-  let t= color(114, 91, 143);
-  let t1= color (76, 50, 89);
-  let h= color(255, 206, 122);
-  let e= color(57, 57, 66);
-  let b= color(255, 143, 165);
-  let vol = mic.getLevel()*1.2;
-  let vol1 = mic.getLevel();
-  let vol_mouth = mic.getLevel()*-1.5;
+
 
   if(sketchStarted){
+
+    background(233, 230, 252);
+    let i= width/2;
+    let j= height/2;
+    let t= color(114, 91, 143);
+    let t1= color (76, 50, 89);
+    let h= color(255, 206, 122);
+    let e= color(57, 57, 66);
+    let b= color(255, 143, 165);
+    let vol = mic.getLevel()*1.2;
+    let vol1 = mic.getLevel();
+    let vol_mouth = mic.getLevel()*-1.5; 
     for (let i = 0; i < confetti.length / 2; i++) {
       confetti[i].confettiDisplay();
   
@@ -106,24 +108,21 @@ function draw() {
     fill(233, 230, 252);
     ellipse(width/2, y, 450, 100);
    
-    // Reset to the bottom
+    // Halo Boundaries
     if (y > 120 || y < 80) {
        moves= -moves;
     }
   
       y= y + moves;
     
-    
-    
-  
-    
-  //ADD EAR ROTATION BASED ON MOUSE TOUCH
-    
+
+  // Brow Movement
     let brow = map(vol, 0, 1, height/2, 30);
     fill(e);
     rect(i+80, brow, 150, 20);
     rect(i-230, brow, 150, 20);
-    
+  
+  //Mouth Reactions
     let mouth_action_open = map(vol_mouth, 0, 1, -25+ height/2, 30);
     fill(227, 91, 120);
     rect(i-60,-20 + mouth_action_open, 120,150);
