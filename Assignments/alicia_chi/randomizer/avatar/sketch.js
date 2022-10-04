@@ -44,11 +44,11 @@ function startSketch(){
 }
 
 function draw() {
-
+  background(233, 230, 252);
 
   if(sketchStarted){
 
-    background(233, 230, 252);
+   
     let i= width/2;
     let j= height/2;
     let t= color(114, 91, 143);
