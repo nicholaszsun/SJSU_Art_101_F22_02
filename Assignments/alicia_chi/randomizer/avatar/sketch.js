@@ -44,10 +44,8 @@ function setup() {
 
 function draw() {
 
- 
-
   if(sketchStarted){
-    
+
     background(233, 230, 252);
     let vol = mic.getLevel()*1.2;
     let vol1 = mic.getLevel();
@@ -254,4 +252,5 @@ function draw() {
     pop();
     
   }
-  }
+}
+}
