@@ -14,8 +14,6 @@ function setup() {
   background(233, 230, 252);
 
   createButton("Start").mousePressed(startSketch);
-
-
   
   confettiColor = [color('#00aeef'), color('#ec008c'), color('#72c8b6')];
   for (let i = 0; i < 100; i++) {
@@ -49,6 +47,7 @@ function draw() {
  
 
   if(sketchStarted){
+    
     background(233, 230, 252);
     let vol = mic.getLevel()*1.2;
     let vol1 = mic.getLevel();
