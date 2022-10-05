@@ -44,7 +44,11 @@ function setup() {
 
 
 function draw() {
-background(233, 230, 252);
+
+
+  if(sketchStarted){
+
+    background(233, 230, 252);
     let i= width/2;
     let j= height/2;
     let t= color(114, 91, 143);
@@ -55,10 +59,6 @@ background(233, 230, 252);
     let vol = mic.getLevel()*1.2;
     let vol1 = mic.getLevel();
     let vol_mouth = mic.getLevel()*-1.5; 
-
-  if(sketchStarted){
-
-    
     for (let i = 0; i < confetti.length / 2; i++) {
       confetti[i].confettiDisplay();
   
