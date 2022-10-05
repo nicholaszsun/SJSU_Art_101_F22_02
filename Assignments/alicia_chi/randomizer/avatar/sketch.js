@@ -55,7 +55,6 @@ function draw() {
   let h= color(255, 206, 122);
   let e= color(57, 57, 66);
   let b= color(255, 143, 165);
-
  
 
   if(sketchStarted){
