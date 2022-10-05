@@ -14,6 +14,12 @@ function setup() {
   background(233, 230, 252);
 
   createButton("Start").mousePressed(startSketch);
+
+  function startSketch(){
+    mic = new p5.AudioIn();
+    mic.start();
+    sketchStarted = true;
+  }
   
   confettiColor = [color('#00aeef'), color('#ec008c'), color('#72c8b6')];
   for (let i = 0; i < 100; i++) {
@@ -32,13 +38,6 @@ function setup() {
   for (let i = 0; i < 65; i++) {
     confetti[i] = new Confetti(random(width), random(height * -1.2, height * -.1), random(-90, 90));
   }
-  
-  function startSketch(){
-    mic = new p5.AudioIn();
-    mic.start();
-    sketchStarted = true;
-  }
- 
 
 }
 
