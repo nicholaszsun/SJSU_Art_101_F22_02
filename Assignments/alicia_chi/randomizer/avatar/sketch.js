@@ -14,13 +14,6 @@ function setup() {
   background(233, 230, 252);
 
   createButton("Start").mousePressed(startSketch);
-
-  function startSketch(){
-    mic = new p5.AudioIn();
-    mic.start();
-
-    sketchStarted = true;
-  }
   
   confettiColor = [color('#00aeef'), color('#ec008c'), color('#72c8b6')];
   for (let i = 0; i < 100; i++) {
@@ -40,18 +33,23 @@ function setup() {
     confetti[i] = new Confetti(random(width), random(height * -1.2, height * -.1), random(-90, 90));
   }
 
+  function startSketch(){
+    mic = new p5.AudioIn();
+    mic.start();
+
+    sketchStarted = true;
+  }
 }
 
 
 function draw() {
-  background(233, 230, 252);
-
- 
 
   if(sketchStarted){
-    let vol = mic.getLevel()*1.2;
+
+    background(233, 230, 252);
+    let vol = mic.getLevel()*.2;
     let vol1 = mic.getLevel();
-    let vol_mouth = mic.getLevel()*-1.5;
+    let vol_mouth = mic.getLevel()*-.2;
     let i= width/2;
     let j= height/2;
     let t= color(114, 91, 143);
@@ -113,7 +111,6 @@ function draw() {
     if (y > 120 || y < 80) {
        moves= -moves;
     }
-  
       y= y + moves;
     
 
@@ -255,13 +252,5 @@ function draw() {
     pop();
     
   }
-  
-  
-  
-  }
-  
-  
-  
-  
-
- 	
+}
+}
