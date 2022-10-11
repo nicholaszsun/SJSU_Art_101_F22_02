@@ -17,10 +17,20 @@ let feelings = [{
 function setup(){
     createCanvas (600, 600);
     background(200);
-
-   console.log(feelings[Infinity(random(feelings.length))]);
-   console.log(feelings[randomIndex].name);
+}
 
 function draw(){
     
+   
+}
+
+function mousePressed(){
+    background(random(255));
+randomIndex = int(random(feelings.length));
+
+   console.log(feelings[randomIndex].name);
+   text(feelings[randomIndex].name, 100,100);
+
+   feelings.splice(randomIndex, 1);
+   console.log(feelings);
 }
