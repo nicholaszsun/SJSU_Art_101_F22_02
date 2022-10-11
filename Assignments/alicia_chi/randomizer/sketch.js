@@ -4,13 +4,12 @@ function setup(){
     createCanvas (600, 600);
     background(200);
 
-    feelings[1] = "Happiness";
-    feelings[2] = "Anger";
-    feelings[3] = "Annoyance";
-    feelings[4] = "Happiness";
-    feelings[5] = "Disgust";
-    feelings[6] = "Neutral";
-    console.log(feelings);
+   console.log("initial array is")
+   console.log(feelings);
+
+   feelings.splice(4, 1);
+   console.log("array after splice");
+   console.log(feelings);
 }
 
 function draw(){
