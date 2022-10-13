@@ -1,3 +1,9 @@
+<html>
+  
+  <head>
+
+</head>
+ <body>
 let names = [{name:"Alice", color:"blue"},{name:"Sylph",color:"green"}Sora","Quez"];
 
 function setup() {
@@ -23,4 +29,6 @@ function mousePressed({
     background(random(200,255));
     Text("nothing left!,50,50");
 }
-}
+ </body>
+ 
+</html>
