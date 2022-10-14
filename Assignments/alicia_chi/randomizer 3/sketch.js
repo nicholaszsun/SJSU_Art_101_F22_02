@@ -19,14 +19,15 @@ let feelings = [{
     color:"grey"
 }];
 
-let faces=[];
+let face=[];
 let randomIndex;
 let animating = false;
 let imageCounter = 0;
+let button;
 
 function preload(){
     for (let i= 0; i<=15; i++){
-        faces[i] = loadImage(`images/faces_#{i}.png`);
+        face[i] = loadImage(`images/face_${i}.JPG`);
     }
 }
 
@@ -34,19 +35,26 @@ function setup(){
     createCanvas (600, 600);
     background(200);
     textSize(18);
+    textFont('Courier new');
+    textAlign(CENTER);
+    textStyle(BOLD);
+    imageMode(CENTER);
     text("click to randomize", 50, 50);
-    ImageBitmapRenderingContext(CENTER);
-    frameRate(12);
-   
+
+    frameRate(6);
+    text("Click to Start the Randomizer", width/2, height/2);
+
+    button = createButton("Click to Randomize");
+    button.mousePressed(buttonPressed);
    
 }
 
 function draw(){
     clear();  if(animating==true){
-        image(faces[]imageCounter, width/2,height/2);
+        image(face[imageCounter], width/2,height/2);
         // triangle(random(600),random(600), random(600), random(600), random(600),random(600));
         clear();
-        if(imageCounter < faces.length - 1 ){
+        if(imageCounter < face.length - 1 ){
             imageCounter++;
         }else{
             imageCounter = 0;
@@ -62,11 +70,13 @@ function randomizer(){
 
     if(feelings[0]){
 
-    background(random(255));
+    // background(random(255));
+    clear();
     randomIndex = int(random(feelings.length));
     console.log(feelings[randomIndex].name);
-    text(`The color ${feelings[randomIndex].name} associated is ${feelings[randomIndex].color}.`, 50,50);
-    //text(feelings[randomIndex].name + "'s associated color is " + feelings[randomIndex].color, 50,50);
+    //text(feelings[randomIndex].name + "'s mociated color is " + feelings[randomIndex].color, 50,50);
+    image(random(face), width/2,height/2);
+    text(`The color ${feelings[randomIndex].name} associated is ${feelings[randomIndex].color}.`, width/2 ,height- 30);
     feelings.splice(randomIndex, 1);
    
 }else{
@@ -76,7 +86,7 @@ function randomizer(){
 }
 }
 
-function mousePressed(){
+function buttonPressed(){
 animating = true;
 setTimeout(randomizer, 2000);
 
