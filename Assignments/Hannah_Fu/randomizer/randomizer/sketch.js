@@ -23,6 +23,14 @@ color: "ruby red"}];
 
 let randomIndex;
 let animating = false;
+let florals = [];
+
+function preload (){
+    for (let i = 0; i <= 7; i++){
+        florals[i] = loadImage(`assets/
+        floral_${i}.JPG`)
+    }
+}
 //let counter = 0;
 function setup() {
     //let r = random(6);
@@ -31,6 +39,7 @@ function setup() {
     textSize(32);
 
     text("click to randomize", 50,50);
+    console.log(florals);
 }
 
 function draw (){
