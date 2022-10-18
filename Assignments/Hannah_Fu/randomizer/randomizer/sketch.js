@@ -45,7 +45,9 @@ function setup() {
 function draw (){
 
     if(animating == true){
-        ellipse(random(width), random(height), random(50, 200));
+       image(florals[0], 0, 0);
+      // ellipse(random(width), random(height), 
+       //random(50, 200));
     }
 }
 
