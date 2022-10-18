@@ -1,38 +1,63 @@
 //Things to to when stressed
 let fontBold;
-
-let activity =  ["sleep", "rest", "drink water", "shower","read"];
-
+let activity =  ["Sleep", "Rest", "Drink Water", "Shower","Read"];
 let randomIndex;
 let counter =0;
 let animating = false;
+let button;
+
+let div;
 
 
 function setup() {
   createCanvas(400, 400);
   background(220);
 
-  
-  fill(0);
-  textSize(12);
-  textFont('Georgia',20, 30)
-  text ("Click to randomize",50, 50);
-  
-  // setTimeout(changeBackground, 2000);
+  textAlign(CENTER, CENTER);
 
+  fill(0);
+  textSize(16);
+  textFont('Georgia',20, 30)
+  // text ("Click to randomize", 0, 62, width);
+
+  
+  
+//shrink and grow
+
+div = createDiv("Click to randomize for stress relief");
+    div.position(0, 0);
+  div.style("font-family", "Georgia");
+
+
+  
+//   style a button  
+button = createButton("click me")
+button.mousePressed(buttonPressed);
+button.class("randomizerButton");
+// button.position(50,50);
 }
 
+
 function draw() {
- 
   if(animating == true){
-    ellipse(random(width), random(height), random(50, 200));
+  const rand = int(random(0, activity.length-1));
+  fill(0);
+  textSize(random(15, 70));
+  text(activity[rand], random(width), random(height));
   }
+
   
   
+  
+  //text grow
+  let sinVal = sin(frameCount * 0.05);
+  let fontSize = map(sinVal, -10, 50, 10, 100);
+  div.style("font-size", fontSize + "px");  
+ 
 }
 
 function changeBackground(){
-  if (counter <= 5){
+  if (counter <= 500){
     counter++;
     console.log(counter)
   background(random(255), random(220), random(220));
@@ -48,29 +73,18 @@ function randomizer(){
   
  background(random(255), random(220), random(220)); 
    randomIndex =  int(random(activity.length));
+
   
-  
-// console.log(activity[randomIndex]);
-text(activity[randomIndex], 150,50); 
-  
-// activity.splice(randomIndex, 1); 
+textSize(32);
+fill(255, 255, 255);
+text(activity[randomIndex], 0, 62, width); 
+
 }
 
-function mousePressed() {
+
+function buttonPressed() {
  
   animating = true;
   setTimeout(randomizer, 2000);
-  
-  
-  
-  
-//  background(random(255)); 
-//    randomIndex =  int(random(activity.length));
-  
-  
-// // console.log(activity[randomIndex]);
-// text(activity[randomIndex], 150,50); 
-  
-// // activity.splice(randomIndex, 1);
-  
 }
+
