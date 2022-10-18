@@ -27,7 +27,7 @@ let flowers = [
   
   function preload(){
         for (let i = 0; i <= flowers.length - 1; i++){
-              plants[i] = loadImage('images/plants_'+i+'.JPEG');
+              plants[i] = loadImage('images/plants_'+i+'.jpeg');
         };
   }
   
