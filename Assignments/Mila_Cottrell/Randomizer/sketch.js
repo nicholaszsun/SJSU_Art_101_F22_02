@@ -16,18 +16,23 @@ let owls =[{
   },{
     name: "nala",
     color: "stardust"   
-  }
+  }];
   
-  ];
-  
+  let randomIndex;
+
   function setup() {
     createCanvas(600, 600);
     background(200);
-    console.log(owls.length)
-   // console.log(owls[int(random(5))]);
-    
+   
   }
   
   function draw(){
     
+  }
+
+  function mousePressed() {
+    background(random(200, 255));
+    randomIndex = int(random(owls.length));
+    text(owls[randomIndex].name, 50, 50);
+    owls.splice(randomIndex, 1);
   }
