@@ -28,7 +28,7 @@ let florals = [];
 function preload (){
     for (let i = 0; i <= 7; i++){
         florals[i] = loadImage(`assets/
-        floral_${i}.JPG`)
+        floral_${i}.jpg`)
     }
 }
 //let counter = 0;
