@@ -23,9 +23,8 @@ let owls =[{
   function setup() {
     createCanvas(600, 600);
     background(200);
-    
-    console.log(random(2));
-    console.log(owls[random(2)]);
+    console.log(owls.length)
+   // console.log(owls[int(random(5))]);
     
   }
   
