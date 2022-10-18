@@ -1,7 +1,7 @@
 let flowers = [
     {
         name: "roses",
-        color: "red"
+        color: "red",
   }, {
         name: "daisies",
         color: "white"
@@ -26,7 +26,7 @@ let imageCounter = 0;
 animating = false;
 
 function preload(){
-      for (let i = 0; i <= 5; i++){
+      for (let i = 0; i <= flowers.length - 1; i++){
             plants[i] = loadImage(`images/plants_${i}.JPEG`);
       };
 }
@@ -75,7 +75,7 @@ function randomizer(){
             image(random(plants), width/2, height/2);
 
             flowers.splice(randomIndex, 1);
-            plants.splice(randomIndex, 1);
+            //plants.splice(randomIndex, 1);
             
             console.log(flowers);
       } else {
@@ -86,7 +86,7 @@ function randomizer(){
 
 function changeBackground(){
       counter++;
-            if (counter <= 5) {
+            if (counter <= flowers.length - 1) {
             background(random(255), random(255), random(255))
             setTimeout(changeBackground, 1000);
       } else {
