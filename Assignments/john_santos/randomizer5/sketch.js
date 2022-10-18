@@ -41,8 +41,8 @@ function setup() {
     imageMode (CENTER);
     frameRate(12);
 
-    
-    fill (0, 0, 0);
+    image(balls[0], width/2, height/2);
+    fill (255, 255, 255);
     text("Yes or No Questions Only", 105 , 200);
     text("Click to get answers", 125 , 215);
 
