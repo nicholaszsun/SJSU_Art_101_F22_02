@@ -27,7 +27,7 @@ let flowers = [
   
   function preload(){
         for (let i = 0; i <= flowers.length - 1; i++){
-              plants[i] = loadImage(`images/plants_${i}.JPEG`);
+              plants[i] = loadImage('images/plants_'+i+'.JPEG');
         };
   }
   
@@ -75,7 +75,6 @@ let flowers = [
               image(random(plants), width/2, height/2);
   
               flowers.splice(randomIndex, 1);
-              plants.splice(randomIndex, 1);
               
               console.log(flowers);
         } else {
