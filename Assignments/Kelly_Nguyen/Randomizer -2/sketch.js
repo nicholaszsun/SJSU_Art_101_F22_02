@@ -24,7 +24,7 @@ function setup (){
 }
 
 function draw(){
-    
+
     if(cheddar== true){
         clear();
         // let k = int(random(14))
@@ -44,23 +44,22 @@ function draw(){
 
 
 function loading(){
-if (cats[1]){
+if (cats[0]){
     clear ();
     randomIndex= int(random(cats.length));
-    image(random(cats,width/2,height/2))
+    image(random(cats),width/2,height/2);
     cats.splice(randomIndex,1);
     } else{
         // image(random(cats,width/2,height/2))
-        background(255,255,255)
-        text("STOP CLICKING FAST",50,500)
-    
+        // background(255,255,255)
+        // text("STOP CLICKING FAST",50,500)
+
     }
 }
 
 function buttonPressed(){
     cheddar = true;
     j = int(random(15));
-    setTimeout(loading,1000);
+    setTimeout(loading,10);
     console.log(j);
-}                                
-
+}
