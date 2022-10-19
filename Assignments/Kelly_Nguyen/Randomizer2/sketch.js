@@ -22,7 +22,7 @@ function setup (){
 
 }
 
-
+//
 function draw(){
 if (animating == true) {
     clear();
