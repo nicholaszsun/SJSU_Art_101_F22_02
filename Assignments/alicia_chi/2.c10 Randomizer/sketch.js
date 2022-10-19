@@ -20,6 +20,7 @@ let feelings = [{
 }];
 
 let face=[];
+let faces;
 let randomIndex;
 let animating = false;
 let imageCounter = 0;
@@ -27,19 +28,15 @@ let button;
 
 function preload(){
     for (let i= 0; i<=15; i++){
-        face[i] = loadImage(`images/face_${i}.JPG`);
+        face[i] = loadImage(`images/face_${i}.jpg`);
+        console.log(faces);
     }
 }
 
 function setup(){
-    createCanvas (600, 600);
+    createCanvas (1000, 1000);
     background(200);
-    textSize(18);
-    textFont('Courier new');
-    textAlign(CENTER);
-    textStyle(BOLD);
-    imageMode(CENTER);
-    text("click to randomize", 50, 50);
+ 
 
     frameRate(6);
     text("Click to Start the Randomizer", width/2, height/2);
