@@ -51,8 +51,8 @@ if (cats[0]){
     cats.splice(randomIndex,1);
     } else{
         // image(random(cats,width/2,height/2))
-        // background(255,255,255)
-        // text("STOP CLICKING FAST",50,500)
+        background(255,255,255)
+        text("STOP CLICKING FAST",50,500)
 
     }
 }
