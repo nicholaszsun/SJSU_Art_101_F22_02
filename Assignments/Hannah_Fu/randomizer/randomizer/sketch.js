@@ -23,6 +23,14 @@ color: "ruby red"}];
 
 let randomIndex;
 let animating = false;
+let florals = [];
+
+function preload (){
+    for (let i = 0; i <= 7; i++){
+        florals[i] = loadImage(`assets/
+        floral_${i}.jpg`)
+    }
+}
 //let counter = 0;
 function setup() {
     //let r = random(6);
@@ -31,12 +39,15 @@ function setup() {
     textSize(32);
 
     text("click to randomize", 50,50);
+    console.log(florals);
 }
 
 function draw (){
 
     if(animating == true){
-        ellipse(random(width), random(height), random(50, 200));
+       image(florals[0], 0, 0);
+      // ellipse(random(width), random(height), 
+       //random(50, 200));
     }
 }
 
