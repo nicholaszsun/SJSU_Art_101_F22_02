@@ -35,6 +35,7 @@ function draw(){
         }else {
             imageCounter = 0;
         }
+        console.log(imageCounter)
     }
 
 }
@@ -44,6 +45,7 @@ function draw(){
 
 
 function loading(){
+    cheddar = false
 if (cats[0]){
     clear ();
     randomIndex= int(random(cats.length));
