@@ -37,7 +37,7 @@ function draw(){
         }
         console.log(imageCounter)
     }
-
+//
 }
 
 
