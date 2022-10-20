@@ -1,0 +1,33 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+  canvas {
+    display: block;
+  }
+  
+  .randomizerButton {
+    background-color: rgb(236, 58, 58);
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 50%;
+    left: 75%;
+  }
+
+  /* .startoverButton {
+    background-color: rgb(48, 74, 192);
+    border: 0px;
+    border-radius: 10px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    padding: 10px 20px;
+    position: fixed;
+    top: 30%;
+    left: 75%;
+  } */
