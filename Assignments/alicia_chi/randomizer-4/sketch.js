@@ -1,21 +1,21 @@
 let feelings = [{
-  name: "Sarrow",
-  colors: "blue"
+  name: "I don't know",
+  colors: "feeling"
 }, {
-  name: "Anger",
-  colors: "red"
+  name: "Fine",
+  colors: "doing"
 }, {
-  name: "Annoyance",
-  colors: "purple"
+  name: "No",
+  colors: "holding up"
 }, {
-  name: "Happiness",
-  colors: "yellow"
+  name: "Not great",
+  colors: "fairing"
 }, {
-  name: "Disgust",
-  colors: "green"
+  name: "Okay",
+  colors: "getting along"
 }, {
-  name: "Neutral",
-  colors: "grey"
+  name: "Good",
+  colors: "my friend"
 }];
 
 //--- Drawing
@@ -157,7 +157,7 @@ function randomizer() {
 
   if (feelings[0]) {
     randomIndex = int(random(feelings.length));
-    text(`The color ${feelings[randomIndex].colors} associated is ${feelings[randomIndex].name}.`, 120, 250, 220, 250);
+    text(`How am I ${feelings[randomIndex].colors} ? ${feelings[randomIndex].name}.`, 120, 250, 220, 250);
     image(random(face), 750, 360);
     feelings.splice(randomIndex);
     setTimeout(loading_text, 2999);
