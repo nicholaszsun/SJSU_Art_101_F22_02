@@ -21,6 +21,8 @@ let flowers = [
   
   let counter;
   let randomIndex;
+  let button;
+  let randomizerButton;
   let plants = [];
   let imageCounter = 0;
   animating = false;
@@ -43,9 +45,13 @@ let flowers = [
         imageMode(CENTER);
         frameRate(8);
   
-        text("Click Button to Generate Flowers", width*.5, height*.5);
+        text("Click to Generate Flowers", width*.5, height*.5);
   
         setTimeout(changeBackground, 1000);
+
+        button = createButton("Randomize!");
+        button.mousePressed(buttonPressed);
+        button.class("randomizerButton")
   }
   
   function draw(){
@@ -87,6 +93,7 @@ let flowers = [
               clear();
               image(bouquet, width*.5, height*.5);
               text("Congrats! You made a bouquet!", width/2, height/8);
+              randomizerButton.remove();
       }
   }
   
