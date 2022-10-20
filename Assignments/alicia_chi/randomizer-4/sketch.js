@@ -164,7 +164,7 @@ function randomizer() {
     setTimeout(loading_text, 2999);
     hair_front();
   } else {
-    text(`The color ${feelings[randomIndex].colors} associated is ${feelings[randomIndex].name}.`, 120, 250, 220, 250);
+    
     image(random(face), 750, 360);
     hair_front();
     setTimeout(loading_text, 2999);
