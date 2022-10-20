@@ -358,4 +358,3 @@ function realHour() {
 
   hour_hand = nf(hour_hand, 2);
 }
-
