@@ -78,6 +78,8 @@ function draw (){
        } else {
         imageCounter = 0;
        }
+
+       console.log(colorInputs);
       // ellipse(random(width), random(height), 
        //random(50, 200));
 
@@ -89,24 +91,26 @@ function addAnotherInput(){
     colorInputs[colorInputs.length - 
     1].parent("#inputFields");
 }
+
 function randomizer(){
     animating = false;
-
-if (flowers[0]){
-    //background(random(200, 255));
-    clear();
-    randomIndex = int(random(flowers.length));
-    
-
-     image(random(florals), width/2, height/2);
-        text(`${flowers[randomIndex].name}'s color is 
-     ${flowers[randomIndex]}`, width/3, height/2);
-    flowers.splice(randomIndex, 1);
-} else {
-    background(touchGrass);
-    text("that's all go touch grass now!", 50, 50);
+    if (flowers[0]){
+        //background(random(200, 255));
+        clear();
+        randomIndex = int(random(flowers.length));
+        console.log(colorInputs[0])
+        image(random(florals), width/2, height/2);
+            text(`${flowers[randomIndex].name}'s color is 
+        ${flowers[randomIndex]}`, width/3, height/2);
+        flowers.splice(randomIndex, 1);
+    } else {
+        background(touchGrass);
+        text("that's all go touch grass now!", 50, 50);
+    }
 }
-}
+
+
+
 function buttonPressed(){
 
     if (firstTime){
@@ -115,11 +119,6 @@ function buttonPressed(){
     }
     firstTime = false;
 }
-    
-    
-
     animating = true;
     setTimeout(randomizer, 3000);
-
-
 }
