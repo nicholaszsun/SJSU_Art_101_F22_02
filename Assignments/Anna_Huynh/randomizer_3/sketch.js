@@ -1,7 +1,7 @@
 let flowers = [
       {
           name: "roses",
-          color: "red",
+          color: "red"
     }, {
           name: "daisies",
           color: "white"
@@ -29,11 +29,13 @@ let flowers = [
         for (let i = 0; i <= flowers.length - 1; i++){
               plants[i] = loadImage('images/plants_'+i+'.jpeg');
         };
+
+        bouquet = loadImage('images/bouquet.jpeg')
   }
   
   function setup() {
         createCanvas(windowWidth, windowHeight);
-        background(200);
+        //background(200);
   
         textSize(24);
         textAlign(CENTER);
@@ -41,7 +43,7 @@ let flowers = [
         imageMode(CENTER);
         frameRate(8);
   
-        text("Click to Generate Flowers", width*.5, height*.5);
+        text("Click Button to Generate Flowers", width*.5, height*.5);
   
         setTimeout(changeBackground, 1000);
   }
@@ -58,6 +60,7 @@ let flowers = [
                           imageCounter = 0;
                     }     
   
+              //random flashing images//
               image(plants[imageCounter], width/2, height/2);            
         }
   };
@@ -69,18 +72,22 @@ let flowers = [
   
               clear();
               randomIndex = int(random(flowers.length));
-  
+
               text(`${flowers[randomIndex].name} are ${flowers[randomIndex].color}`, width/2, height/8);
   
+              //shows image//
               image(random(plants), width/2, height/2);
   
               flowers.splice(randomIndex, 1);
+
+              //plants.splice(randomIndex, 1);
               
-              console.log(flowers);
+              console.log(randomIndex);
         } else {
-              background(random(200, 255));
-              text("Congrats! You made a bouquet!", width*.5, height*.5);
-        }
+              clear();
+              image(bouquet, width*.5, height*.5);
+              text("Congrats! You made a bouquet!", width/2, height/8);
+      }
   }
   
   function changeBackground(){
@@ -93,7 +100,14 @@ let flowers = [
         };
         }
   
-  function mousePressed(){
+  function buttonPressed(){
         animating = true;
-        setTimeout(randomizer, 2000);
+        setTimeout(randomizer, 1000);
+
+        if (flowers <= 0) {
+            setTimeout(randomizer, 100)
+            animating = false;
+        } else {
+            animating = true;
+        }
         }
