@@ -145,7 +145,7 @@ console.log(face);
         }else{
             imageCounter = 0;
         }
-        
+         
 
     }
    
