@@ -28,7 +28,7 @@ function setup(){
     createCanvas(600, 600);
     background(200);
     textSize(32)
-  textFont('Comic sans');
+
   textStyle(ITALIC);
   fill (255);
   imageMode(CENTER);
@@ -67,12 +67,12 @@ function draw() {
     if(animating == true){
       clear();
       
-    image(cat[imageCounter], width/2, height/2);
+    image(cat[imageCountner], width/2, height/2);
     
-      if (imageCounter < cat.length - 1){
-      imageCounter++;  
+      if (imageCountner < cat.length - 1){
+      imageCountner++;  
       } else { 
-        imageCounter = 0;
+        imageCountner = 0;
       }
     }
 }
