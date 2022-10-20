@@ -1,5 +1,5 @@
 let flowers = [
-    {name:"myosotis"}, 
+{name:"myosotis"}, 
 
 {name:"rosemary"},
 
@@ -17,6 +17,7 @@ let flowers = [
 let randomIndex;
 let animating = false;
 let florals = [];
+let touchGrass;
 let imageCounter = 0;
 let startRandomizerButton;
 let addMoreButton;
@@ -27,6 +28,7 @@ let colorInputs = [];
 let firstTime = true;
 
 function preload (){
+    touchGrass = loadImage ('https://raw.githubusercontent.com/SJSU-CADRE-CLASSES/SJSU_Art_101_F22_02/main/Assignments/Hannah_Fu/randomizer/randomizer/assets/touch_grass.jpg');
     for (let i = 0; i <= 6; i++){
         florals[i] = loadImage('assets/floral_'+i+'.jpg')
     }
@@ -43,10 +45,10 @@ function setup() {
     //textAlign(CENTER);
     textStyle(BOLD);
     fill(200);
-    imageMode(CENTER);
+   imageMode(CENTER);
     frameRate(8);
 
-    text("Welcome to the flower gallery", 50,50);
+    text("Welcome to the flower gallery", 100,200);
     console.log(florals);
 
     
@@ -98,10 +100,10 @@ if (flowers[0]){
 
      image(random(florals), width/2, height/2);
         text(`${flowers[randomIndex].name}'s color is 
-     ${flowers[randomIndex]}`, width/2, height/2);
+     ${flowers[randomIndex]}`, width/3, height/2);
     flowers.splice(randomIndex, 1);
 } else {
-    background(random(200, 255));
+    background(touchGrass);
     text("that's all go touch grass now!", 50, 50);
 }
 }
