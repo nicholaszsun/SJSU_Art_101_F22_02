@@ -1,4 +1,3 @@
-
 let feelings = [{
   name: "Sarrow",
   colors: "blue"
