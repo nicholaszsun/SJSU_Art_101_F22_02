@@ -1,24 +1,17 @@
 let flowers = [
-{name:"myosotis", 
-color: "baby blue"}, 
+    {name:"myosotis"}, 
 
-{name:"rosemary", 
-color: "toad green"},
+{name:"rosemary"},
 
-{name:"lavender", 
-color: "light violet"},
+{name:"lavender"},
 
-{name: "marigold", 
-color: "bright yellow"},
+{name: "marigold"},
 
-{name: "snowdrop", 
-color: "snowy white"},
+{name: "snowdrop"},
 
-{name: "peony",
-color: "quartz pink"},
+{name: "peony"},
 
-{name: "rose",
-color: "ruby red"}];
+{name: "rose"}];
 
 
 let randomIndex;
@@ -29,7 +22,9 @@ let startRandomizerButton;
 let addMoreButton;
 
 let cnv;
-let nameInputs = [];
+let colorInputs = [];
+
+let firstTime = true;
 
 function preload (){
     for (let i = 0; i <= 6; i++){
@@ -39,7 +34,7 @@ function preload (){
 //let counter = 0;
 function setup() {
     //let r = random(6);
-    cnv = createCanvas(600, 600);
+    cnv = createCanvas(700, 600);
     cnv.parent("#canvasDiv");
 
     background(240, 245, 230);
@@ -51,10 +46,10 @@ function setup() {
     imageMode(CENTER);
     frameRate(8);
 
-    text("click to randomize", 50,50);
+    text("Welcome to the flower gallery", 50,50);
     console.log(florals);
 
-    //button = createButton("click to randomize");
+    
     startRandomizerButton = select('#randButton');
     startRandomizerButton.mousePressed(buttonPressed);
 
@@ -63,8 +58,8 @@ function setup() {
    
 
 for (let i = 0; i < 3; i++) {
-    nameInputs.push(createInput());
-    nameInputs[nameInputs.length - 
+    colorInputs.push(createInput());
+    colorInputs[colorInputs.length - 
     1].parent("#inputFields");
 }
 }
@@ -88,8 +83,8 @@ function draw (){
 }
 
 function addAnotherInput(){
-    nameInputs.push(createInput());
-    nameInputs[nameInputs.length - 
+    colorInputs.push(createInput());
+    colorInputs[colorInputs.length - 
     1].parent("#inputFields");
 }
 function randomizer(){
@@ -103,14 +98,24 @@ if (flowers[0]){
 
      image(random(florals), width/2, height/2);
         text(`${flowers[randomIndex].name}'s color is 
-     ${flowers[randomIndex].color}`, width/2, height/2);
+     ${flowers[randomIndex]}`, width/2, height/2);
     flowers.splice(randomIndex, 1);
 } else {
     background(random(200, 255));
-    text("nothing left!", 50, 50);
+    text("that's all go touch grass now!", 50, 50);
 }
 }
 function buttonPressed(){
+
+    if (firstTime){
+        for(let i = 0; i <colorInputs.length; i++){
+            flowers.push(colorInputs[i].value());
+    }
+    firstTime = false;
+}
+    
+    
+
     animating = true;
     setTimeout(randomizer, 3000);
 
