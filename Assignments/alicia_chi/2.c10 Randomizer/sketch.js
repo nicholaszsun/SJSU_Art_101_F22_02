@@ -34,6 +34,8 @@ let  minuteWidth = 5;
 let  hourWidth = 10;
 let  centerX;
 let  centerY;
+let intro = 'Click the Button To Randomize!';
+let gamestart=false;
 
 let face=[];
 let faces;
@@ -44,8 +46,8 @@ let button;
 
 function preload(){
     for (let i= 0; i<=15; i++){
-        face[i] = loadImage(`images/face_${i}.jpg`);
-        console.log(faces);
+        face[i] = loadImage(`images/face_${i}.png`);
+        console.log(face);
     }
 }
 
@@ -69,13 +71,26 @@ function draw(){
 
     background('#F34343');
     stroke(2);
+    textSize(18);
+    textFont('Courier new');
+    textAlign(CENTER);
+    textStyle(BOLD);
+    imageMode(CENTER);
+    
 
     if (drawdraw ==true){
         //------------------- Background -------------------\\
   translate(-680,-430); 
   painting_rect_verticle();
+  strokeWeight(0);
   translate(+680,+430);
-  
+
+  if (gamestart == false){
+    text(intro, 120, 250 , 220, 250);
+  }
+ 
+
+
   // Clock
   
   clockSurface();
@@ -95,6 +110,7 @@ function draw(){
   let  hr = map(hour(), 0, 12, 0, TWO_PI) - HALF_PI;
   strokeWeight(hourWidth)
   line(centerX, centerY, centerX + hourLength * cos(hr), centerY + hourLength * sin(hr));
+
     
     //------------------- Person-------------------\\ 
   torso_base();
@@ -119,9 +135,9 @@ function draw(){
   arm_R(); 
 
     }
-
+console.log(face);
     if(animating==true){
-        image(face[imageCounter], width/2 - 90 ,height/2- 250 );
+        image(face[imageCounter], 760  ,360 );
       
         // clear();
         if(imageCounter < face.length + 1 ){
@@ -129,7 +145,7 @@ function draw(){
         }else{
             imageCounter = 0;
         }
-        
+         
 
     }
    
@@ -143,19 +159,23 @@ function randomizer(){
     randomIndex = int(random(feelings.length));
     console.log(feelings[randomIndex].name);
     //text(feelings[randomIndex].name + "'s mociated color is " + feelings[randomIndex].color, 50,50);
-    image(random(face), width/2 - 90, height/2 -250);
-    text(`The color ${feelings[randomIndex].name} associated is ${feelings[randomIndex].color}.`, width/2 - 90 ,height/2- 250);
+    image(random(face), 760  ,360);
+    text(`The color ${feelings[randomIndex].color} associated is ${feelings[randomIndex].name}.`, 120, 250 , 220, 250);
     feelings.splice(randomIndex, 1);
-   
+    clear();
 }else{
-    text("Nothing Left!", 50, 50);
+    text("Nothing Left!", 120, 250 , 220, 250);
 
 }
 }
 
 function buttonPressed(){
+ 
+  draw();
 animating = true;
-setTimeout(randomizer, 2000);
+gamestart = true;
+setTimeout(randomizer, 3000);
+
 
 
 
@@ -257,12 +277,7 @@ function arm_R(){
     rect(width/2 + 110,height/2 -15,75, 45);
     
     }
-    
-    function text_bg(){
-        
-    fill('#2E333A');
-    rect(width/2 -450 , 50, 900, 100);
-    }
+
     
     function table(){
       
@@ -293,15 +308,7 @@ function arm_R(){
     ellipse(width/2, 880, 600,35);
     }
     
-    function mousePressed() {
-      shape1.pressed();
-      
-    }
-    
-    function mouseReleased() {
-      shape1.released();
-     
-    }
+
     
     function clockSurface() {
       fill('#E9D2D6');
@@ -310,7 +317,7 @@ function arm_R(){
     
     }  
     
-    
+    //Getting the real Sec
     function realSecond() {
       second_hand = second(); 
       second_hand = nf(second_hand, 2);
