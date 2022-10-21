@@ -113,7 +113,32 @@ Refresh to start again
 
 }
 
+//end screen animation
 
+
+let deltaT = 0;
+function curtainFall() {
+    if (deltaT < width / 4) {
+      fill("red");
+      stroke("black");
+      rect(0 + deltaT, 0, width / 20, height);
+      rect(width - width / 20 - deltaT, 0, width / 20, height);
+
+      deltaT += width / 20;
+    } else {
+      deltaT = 0;
+    }
+  
+  }
 
 function draw() {
+  if (ani_transition == true) {
+    stroke(random(256), random(256), random(256));
+    fill(random(256),random(91),random(91));
+    ellipse(random(width), random(height), random(width / 4, width / 3));
+  }
+
+  if (ani_endScreen == true) {
+    setInterval(curtainFall, 1000);
+  }
 }
