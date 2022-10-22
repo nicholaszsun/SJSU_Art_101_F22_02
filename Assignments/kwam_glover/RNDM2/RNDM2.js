@@ -37,6 +37,7 @@ function makeHouses() {
 function mousePressed() {
 	particles.push(new Firework(mouseX, height));
 }
+  
 
 function draw() {
 	background(60,225,250);
