@@ -1,67 +1,59 @@
 let randomIndex;
-let cheddar = false;
-let button;
-let j;
+let animating = false;
 let imageCounter =0;
 let cats = [];
+let button;
 
 function preload(){
     for (let i =0; i <= 15; i++){
-        cats[i] = loadImage('assets/cat_'+i+'.jpg')
+        cats[i] = loadImage('assets/cat_'+i+'.jpg');
     }
 }
 
 function setup (){
     createCanvas(windowWidth,windowHeight);
     background(200);
-
-    button = createButton('click me');
+    button = createButton("click to mew mew");
     button.position(50,50);
     button.mousePressed(buttonPressed);
-    console.log(cats);
     imageMode(CENTER);
-    frameRate(7);
+
+    frameRate(12);
+
 }
 
+//
 function draw(){
+if (animating == true) {
+    clear();
+    image(cats[imageCounter],width/2,height/2);
 
-    if(cheddar== true){
-        clear();
-        // let k = int(random(14))
-        image(cats[imageCounter],width/2,height/2);
-
-        if(imageCounter < cats.length -1){
-        imageCounter++;
-        }else {
-            imageCounter = 0;
+    if(imageCounter < cats.length -1) {
+    imageCounter++;
+    } else {
+    imageCounter = 0;
         }
-        console.log(imageCounter)
     }
-
 }
 
 
 
 
-
-function loading(){
-    cheddar = false
-if (cats[0]){
-    clear ();
-    randomIndex= int(random(cats.length));
+function randomizer (){
+    animating = false;
+  if (cats[0]){
+   clear();
+    randomIndex =int(random(cats.length));
     image(random(cats),width/2,height/2);
     cats.splice(randomIndex,1);
-    } else{
-        // image(random(cats,width/2,height/2))
-        background(255,255,255)
-        text("STOP CLICKING FAST",50,500)
-
+    } else {
+   clear();
+    text("STOP CLICKING SO FAST",50,500);
     }
 }
 
-function buttonPressed(){
-    cheddar = true;
-    j = int(random(15));
-    setTimeout(loading,10);
-    console.log(j);
+function buttonPressed (){
+    animating = true;
+    setTimeout (randomizer,2000);
+  
 }

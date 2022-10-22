@@ -2,12 +2,11 @@
 let fontBold;
 let activity =  ["Sleep", "Rest", "Drink Water", "Shower","Read"];
 let randomIndex;
-let counter =0;
+let counter = 10;
 let animating = false;
 let button;
-
 let div;
-
+let alarm =  ["Don't Stress", "Stress", "Lose Control", "Panic","Anxiety"];
 
 function setup() {
   createCanvas(400, 400);
@@ -19,7 +18,6 @@ function setup() {
   textSize(16);
   textFont('Georgia',20, 30)
   // text ("Click to randomize", 0, 62, width);
-
   
   
 //shrink and grow
@@ -27,9 +25,8 @@ function setup() {
 div = createDiv("Click to randomize for stress relief");
     div.position(0, 0);
   div.style("font-family", "Georgia");
-
-
   
+ 
 //   style a button  
 button = createButton("click me")
 button.mousePressed(buttonPressed);
@@ -43,11 +40,9 @@ function draw() {
   const rand = int(random(0, activity.length-1));
   fill(0);
   textSize(random(15, 70));
-  text(activity[rand], random(width), random(height));
+  text(alarm[rand], random(width), random(height));
   }
 
-  
-  
   
   //text grow
   let sinVal = sin(frameCount * 0.05);
@@ -57,34 +52,40 @@ function draw() {
 }
 
 function changeBackground(){
-  if (counter <= 500){
+  if (counter <= 1){
     counter++;
     console.log(counter)
   background(random(255), random(220), random(220));
-setTimeout(changeBackground, 1000);
+setTimeout(changeBackground, 2000);
 } else {
 
 } 
 }
+
 
 function randomizer(){
  
   animating = false;
   
  background(random(255), random(220), random(220)); 
-   randomIndex =  int(random(activity.length));
+   randomIndex =  int(random(alarm.length));
 
+
+//block
+noStroke();
+fill(0);
+rect(0, -1, 500, 55);  
+rect(0, 350, 500, 55); 
   
-textSize(32);
+  
+textSize(50);
 fill(255, 255, 255);
-text(activity[randomIndex], 0, 62, width); 
+text(activity[randomIndex], 0, 180, width); 
 
 }
-
 
 function buttonPressed() {
  
   animating = true;
   setTimeout(randomizer, 2000);
 }
-
