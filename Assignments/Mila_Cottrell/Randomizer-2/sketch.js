@@ -44,8 +44,8 @@ let owls =[{
         // this displays random name and splices it out of array
     background(random(200, 255));
     randomIndex = int(random(owls.length));
-    text();
-    // text(owls[randomIndex].name + "'s favorute color is" + owls[randomIndex].color, 50, 50);
+    text(`${owls[randomIndex].name}'s favorite color inspect ${owls[randomIndex].color}`, 50, 50);
+    // text(owls[randomIndex].name + "'s favorite color is" + owls[randomIndex].color, 50, 50);
     owls.splice(randomIndex, 1);
     } else {
     background(random(200, 255));
