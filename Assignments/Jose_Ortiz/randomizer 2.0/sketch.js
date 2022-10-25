@@ -14,7 +14,6 @@ function setup() {
     let x = random(windowWidth);
     let y = random (windowHeight);
     let r = random (250,150);
-   // let okay = random (assets);
     let b = new Bubble (x,y,r);
     bubbles.push(b);
   }  
@@ -43,8 +42,7 @@ function draw() {
       
     }
     clicked(px,py){
-     // let d = dist (px,py,this.x,this.y)
-      //if (d < this.r){
+     
       if 
         (px > this.x &&
          px < this.x + this.r &&
