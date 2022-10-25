@@ -100,8 +100,7 @@ function randomizer(){
         randomIndex = int(random(flowers.length));
         console.log(colorInputs[0])
         image(random(florals), width/2, height/2);
-            text(`${flowers[randomIndex].name}'s color is 
-        ${flowers[randomIndex]}`, width/3, height/2);
+            text(flowers[randomIndex].name+'s color is '+flowers[randomIndex], width/3, height/2);
         flowers.splice(randomIndex, 1);
     } else {
         background(touchGrass);

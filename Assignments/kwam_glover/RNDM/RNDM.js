@@ -1,14 +1,22 @@
+var bgColor;
+
 let count = 0;
+let button;
 
 function setup() {
-
+  
   createCanvas(400, 400);
-  background(2, 200, 250);
-
+  bgColor = color( random(255), random(255), random(255) );
+  createButton("RR");
   angleMode(DEGREES);
 
-
+button = createButton ("RR");
+button.mousePressed();
+button.style("padding", "20px");
+button.style("background-color", "#28b07a");
 }
+
+
 
 function draw() {
   if (count<360){
@@ -18,7 +26,12 @@ function draw() {
   bigTri(2,2);
   smallTri();
   medTri();
+  
 
+}
+function mousePressed(){
+	bgColor = color( random(255), random(255), random(255) );
+    background(bgColor);
 
 }
 
@@ -49,7 +62,7 @@ function medTri(){
   pop();
 }
 
-function bigTri(xpos,ypos){
+function bigTri(xpos,ypos){ 
   push();
   translate(width/xpos,height/ypos);
   rotate(count*.25);
@@ -61,5 +74,5 @@ function bigTri(xpos,ypos){
   vertex(width * 0.2, height * 0.8);
   endShape(CLOSE);
   pop();
-
+  
 }
