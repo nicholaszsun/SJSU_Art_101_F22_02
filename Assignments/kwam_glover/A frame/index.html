@@ -9,15 +9,12 @@
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
       <a-sky color="#ECECEC"></a-sky>
-      <a-scene>
-      <a-assets>
-          <a-asset-item id="env-obj" src="env.obj"></a-asset-item>
-          <a-asset-item id="blocks-obj" src="blocks.obj"></a-asset-item>
-      </a-assets>
       
-        <a-entity position="-1 5.5 -5"obj-model="obj: #env-obj;"></a-entity>
-        <a-entity position="-1 5.5 -5"obj-model="obj: #blocks-obj;"></a-entity>
+        <a-assets>
+          <a-asset-item id="env-obj" src="env.obj"></a-asset-item>
+        </a-assets>
+      
+        <a-entity obj-model="obj: #env-obj;"></a-entity>
       </a-scene>
-    </a-scene>
   </body>
 </html>
