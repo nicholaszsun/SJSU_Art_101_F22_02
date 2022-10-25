@@ -2,18 +2,20 @@ let input, button, greeting;
 
 function setup() {
   // create canvas
- createCanvas(400, 400);
+ createCanvas(1110, 700);
 	
 
   input = createInput();
-  input.position(20, 65);
+  textAlign(CENTER)
+  input.position(20, 55);
 
   button = createButton('submit');
-  button.position(input.x + input.width, 65);
+  button.position(input.x + input.width, 100);
+
   button.mousePressed(greet);
 
-  greeting = createElement('h2', 'what is your name?');
-  greeting.position(50, 5);
+  greeting = createElement('h2', 'Feel the screen ?');
+  greeting.position(500, 50);
 
   textAlign(CENTER);
   textSize(100);
