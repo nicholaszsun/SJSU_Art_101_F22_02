@@ -20,24 +20,34 @@ let owls =[{
   
   let randomIndex;
   let animating = false;
+  let animals = [];
+  
+  function preload() {
+
+    for (let i = 0; i <= 15; i++){
+      animals[i] = loadImage(`Assets/animal_${i}.jpg`)
+    }
+  }
 
   function setup() {
     createCanvas(600, 600);
     background(200);
     textSize(32);
+    imageMode(CENTER);
    
     text("click to randomize", 50, 50)
+    console.log(animals);
   }
   
-  function draw(){
+  function draw() {
     
     if (animating == true){
-      ellipse(random(width), random(height), random(50, 200));
+      image(animals[0], width/2, height/2);
 
     }
   }
 
-  function randomizer(){
+  function randomizer() {
     animating = false;
 
     if (owls[0]) {
