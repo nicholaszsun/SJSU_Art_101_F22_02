@@ -13,7 +13,7 @@ let button;
 let cnv;
 
 function preload() {
-  for (let i = 0; i <= 11; i++) {
+  for (let i = 0; i <= 10; i++) {
     img[i] = loadImage("img_" + i + ".jpeg")
   }
 }
