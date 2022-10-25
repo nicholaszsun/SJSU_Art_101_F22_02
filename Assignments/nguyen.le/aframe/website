@@ -11,11 +11,4 @@
       <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
-  <a-scene>
-    <a-assets>
-      <a-asset-item id="env-obj" src="env.obj"></a-asset-item>
-    </a-assets>
-  
-    <a-entity obj-model="obj: #env-obj;"></a-entity>
-  </a-scene>
 </html>
