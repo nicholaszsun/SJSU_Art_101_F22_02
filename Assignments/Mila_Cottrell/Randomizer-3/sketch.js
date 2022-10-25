@@ -1,31 +1,12 @@
-let owls =[{
-    name: "dillon", 
-    color: "owl treat color"
-  },{
-    name: "Ziggy", 
-    color: "chartrese"
-  },{
-    name: "mercedes", 
-    color: "poop"
-  },{
-    name: "petunia",
-    color: "rose gold"   
-  },{
-    name: "kloot",
-    color: "coffee grind bero"   
-  },{
-    name: "nala",
-    color: "stardust"   
-  }];
-  
   let randomIndex;
   let animating = false;
   let animals = [];
+  let imageCounter = 0;
   
   function preload() {
 
     for (let i = 0; i <= 15; i++){
-      animals[i] = loadImage(`Assets/animal_${i}.jpg`)
+      animals[i] = loadImage('Assets/animal_'+i+'.jpg')
     }
   }
 
@@ -34,6 +15,7 @@ let owls =[{
     background(200);
     textSize(32);
     imageMode(CENTER);
+    frameRate(12);
    
     text("click to randomize", 50, 50)
     console.log(animals);
@@ -41,9 +23,16 @@ let owls =[{
   
   function draw() {
     
-    if (animating == true){
-      image(animals[0], width/2, height/2);
+    if (animating == true){ 
+      clear();
+      image(animals[imageCounter], width/2, height/2);
 
+      if (imageCounter < animals.length){
+      imageCounter++;
+      } else {
+        imageCounter = 0;
+      }
+      
     }
   }
 
@@ -51,11 +40,12 @@ let owls =[{
     animating = false;
 
     if (owls[0]) {
-        // this displays random name and splices it out of array
-    background(random(200, 255));
+    // background(random(200, 255));
+    clear();
     randomIndex = int(random(owls.length));
-    text(`${owls[randomIndex].name}'s favorite color inspect ${owls[randomIndex].color}`, 50, 50);
-    // text(owls[randomIndex].name + "'s favorite color is" + owls[randomIndex].color, 50, 50);
+    
+    image(random(animals), width/2, height/2);
+    text(owls[randomIndex].name, width/2, height - 100);
     owls.splice(randomIndex, 1);
     } else {
     background(random(200, 255));
