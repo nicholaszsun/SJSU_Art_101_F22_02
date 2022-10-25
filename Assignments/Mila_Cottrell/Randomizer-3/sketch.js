@@ -26,7 +26,7 @@ let button;
 
 function preload() {
 
-  for (let i = 0; i <= 15; i++){
+  for (let i = 0; i <= 8; i++){
     animals[i] = loadImage('assets/animal_'+i+'.jpg');
   }
 }
@@ -54,7 +54,7 @@ function draw() {
     clear();
     image(animals[imageCounter], width/2, height/2);
 
-    if (imageCounter < animals.length){
+    if (imageCounter < animals.length -1){
     imageCounter++;
     console.log(imageCounter);
     } else {
