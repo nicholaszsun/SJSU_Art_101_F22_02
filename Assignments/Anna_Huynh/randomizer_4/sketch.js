@@ -26,17 +26,17 @@ let flowers = [
       //   };
 
         for (let i = 0; i <= 3 - 1; i++){
-            clothes[i] = loadImage('images/new_images/clothes_'+i+'.jpg');
+            clothes[i] = loadImage('images/new_images/clothes_'+i+'.png');
       };
 
-        bouquet = loadImage('images/bouquet.jpeg')
+        //bouquet = loadImage('images/bouquet.jpeg')
 
-        base = loadImage('images/new_images/base.jpg')
+        base = loadImage('images/new_images/base.png')
   }
   
   function setup() {
         createCanvas(windowWidth, windowHeight);
-        //background(200);
+        background(150, 198, 172);
   
         textSize(24);
         textAlign(CENTER);
@@ -65,13 +65,14 @@ let flowers = [
               //ellipse(random(width), random(height), random(50, 200))
   
               clear();
+
+              background(150, 198, 172);
   
                     if (imageCounter < clothes.length - 1){
                           imageCounter++;
                     } else {
                           imageCounter = 0;
                     }     
-  
               //random flashing images//
               image(clothes[imageCounter], width/2, height/2);            
         }
@@ -80,14 +81,16 @@ let flowers = [
   function randomizer(){
         animating = false;
         if (flowers[0]) {
-              //background(random(255), random(255), random(255));
-  
-              //clear();
+              
+              clear();
               randomIndex = int(random(flowers.length));
+
+              background(150, 198, 172);
 
               text(`${flowers[randomIndex].name}`, width/2, height/8);
   
               //shows image//
+              
               image(random(clothes), width/2, height/2);
   
               flowers.splice(randomIndex, 1);
@@ -98,6 +101,7 @@ let flowers = [
         } else {
               clear();
               //image(bouquet, width*.5, height*.5);
+              background(150, 198, 172)
               image(random(clothes), width/2, height/2);
               text("Mmm... I'll go with this! Thanks!", width/2, height/8);
               randomButton.remove();

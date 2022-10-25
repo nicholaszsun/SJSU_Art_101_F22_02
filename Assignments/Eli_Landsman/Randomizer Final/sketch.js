@@ -35,11 +35,11 @@ function setup() {
   background(50, 100, 200);
   textSize(36);
   textFont('Avenir');
-  textAlign(CENTER);
+  textAlign(screenLeft );
   textStyle(BOLD);
   fill(255);
   frameRate(8);
-  text("Click the Button to Get Random", windowWidth/2, windowHeight/4.5);
+  text("Click the Button to Get Random", 300, windowHeight/4.5);
   setTimeout(changeBackground, 1000);
 
   startRandomizerbutton = select('#randButton')
@@ -47,7 +47,7 @@ function setup() {
 }
 
 function draw(){
-  text("So... You Suck at Coding", windowWidth/2, windowHeight/3.5);
+  text("So... You Suck at Coding", 300, windowHeight/3.5);
  if (animating == true){
   clear();
   image(pics[imageCounter], windowWidth/3.5, windowHeight/2.5);
@@ -68,7 +68,7 @@ function randomizer(){
       // background(random(200,255),random(200,255),random(200,255));
       clear();
       randomIndex = int(random(response.length));
-      text(response[randomIndex], windowWidth/2, windowHeight/2.65);
+      text(response[randomIndex], 300, windowHeight/2.65);
       image(pics[randomIndex], windowWidth/3.5, windowHeight/2.5);
       response.splice(randomIndex, 1);
     }
