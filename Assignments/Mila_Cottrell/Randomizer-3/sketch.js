@@ -46,6 +46,8 @@ function setup() {
 
   button = createButton("click to randomize");
   button.mousePressed(buttonPressed);
+  button.style("padding", "20px");
+  button.style("background-color", "#328da8");
 }
 
 function draw() {
@@ -79,7 +81,9 @@ function randomizer() {
   owls.splice(randomIndex, 1);
   } else {
   background(random(200, 255));
+  
   text("nothing left!", 50, 50);
+  textAlign(CENTER);
 }
 }
 
