@@ -13,10 +13,11 @@
       <a-assets>
           <a-asset-item id="env-obj" src="env.obj"></a-asset-item>
           <a-asset-item id="blocks-obj" src="blocks.obj"></a-asset-item>
+          <a-asset-item id="materials-mtl" src="materials.mtl"></a-asset-item>
       </a-assets>
       
         <a-entity position="-1 5.5 -5"obj-model="obj: #env-obj;"></a-entity>
-        <a-obj-model src="#blocks-obj"></a-obj-model>
+        <a-obj-model src="#blocks-obj" mtl="#materials-mtl"></a-obj-model>
       </a-scene>
     </a-scene>
   </body>
