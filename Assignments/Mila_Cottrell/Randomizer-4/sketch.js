@@ -1,21 +1,15 @@
 let owls =[{
-  name: "dillon", 
-  color: "owl treat color"
+  name: "Anne"
 },{
-  name: "Ziggy", 
-  color: "chartrese"
+  name: "Molly"
 },{
-  name: "mercedes", 
-  color: "poop"
+  name: "Willow"
 },{
-  name: "petunia",
-  color: "rose gold"   
+  name: "Hooty"   
 },{
-  name: "kloot",
-  color: "coffee grind bero"   
+  name: "Tulip"   
 },{
-  name: "nala",
-  color: "stardust"   
+  name: "Belle"   
 }];
 
 let randomIndex;
@@ -32,13 +26,13 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 600);
-  background(20, 40, 200);
+  createCanvas(800, 800);
+  background(100, 214, 99);
   textSize(36);
   textFont('Courier new');
   textAlign(CENTER);
   textStyle(BOLD);
-  fill(255);
+  fill(0);
   imageMode(CENTER);
   frameRate(12);
  
@@ -46,8 +40,7 @@ function setup() {
 
   button = createButton("click to randomize");
   button.mousePressed(buttonPressed);
-  button.style("padding", "20px");
-  button.style("background-color", "#328da8");
+  button.class("randomizerButton");
 }
 
 function draw() {
@@ -82,8 +75,7 @@ function randomizer() {
   } else {
   background(random(200, 255));
   
-  text("nothing left!", 50, 50);
-  textAlign(CENTER);
+  text("You have your owl family!", 300, 100);
 }
 }
 
