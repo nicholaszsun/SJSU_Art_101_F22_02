@@ -134,16 +134,16 @@ function draw() {
 
   }
 
-  if (animating == true) {
-    image(face[imageCounter], 750, 360);
+  // if (animating == true) {
+  //   image(face[imageCounter], 750, 360);
 
-    if (imageCounter < face.length + 1) {
-      imageCounter++;
-    } else {
-      imageCounter = 0;
-    }
+  //   if (imageCounter < face.length + 1) {
+  //     imageCounter++;
+  //   } else {
+  //     imageCounter = 0;
+  //   }
 
-  }
+  // }
 
 
 
