@@ -1,14 +1,45 @@
 <html>
   <head>
+    <title>L17 The A-Frame Inspector</title>
+
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
   </head>
+
   <body>
     <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
-    </a-scene>
+      <!-- CAMERA Controls -->
+      <a-camera camera="" position="7.146934609243379 42.95177447425933 20.524705885737312" rotation="-48.586821027093826 -366.34921420664546 0" look-controls="touchEnabled: true" wasd-controls="fly: true; acceleration: 50" data-aframe-inspector-original-camera="">
+        <a-entity cursor="" raycaster=""></a-entity> --&gt;
+         </a-camera>
+      <!-- Assets Management System -->
+      <a-assets>
+        <a-asset-item id="model-obj" src="assets/model.obj"></a-asset-item>
+        <a-asset-item id="object-obj" src="assets/object.obj"></a-asset-item>
+      </a-assets>
+
+      <!-- Lighting / Ambient-->
+      <!-- <a-entity light="type: ambient; intensity: 0.3">
+      </a-entity> -->
+       <!-- Lighting / Spot / STARS-->
+       
+       <a-entity light="type: point; intensity: 0.3; distance: 40; penumbra: 0.3" position="29.17872 14.212 -5.96666" visible="">
+      </a-entity>
+
+      <a-entity light="type: point; intensity: 0.3; distance: 60; penumbra: 0.3" position="18.20331 -12.542 6.82638" visible="">
+      </a-entity>
+
+      <a-entity light="type: point; intensity: 0.3; distance: 100; penumbra: 0.3" position="35.20331 22.542 6.82638" visible="">
+      </a-entity>
+      
+      <a-sky color="black"></a-sky>
+      
+        
+
+        <!-- <a-obj-model src="#model-obj"color="#4CC3D9"> </a-obj-model> -->
+        <a-obj-model src="#object-obj" position="0 0 0" color="white" height="10000" width="1000"> </a-obj-model>
+            <a-entity hello-world></a-entity>
+      </a-scene>
   </body>
 </html>

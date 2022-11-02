@@ -26,7 +26,7 @@ let button;
 
 function preload() {
 
-  for (let i = 0; i <= 15; i++){
+  for (let i = 0; i <= 8; i++){
     animals[i] = loadImage('assets/animal_'+i+'.jpg');
   }
 }
@@ -46,6 +46,8 @@ function setup() {
 
   button = createButton("click to randomize");
   button.mousePressed(buttonPressed);
+  button.style("padding", "20px");
+  button.style("background-color", "#328da8");
 }
 
 function draw() {
@@ -54,7 +56,7 @@ function draw() {
     clear();
     image(animals[imageCounter], width/2, height/2);
 
-    if (imageCounter < animals.length){
+    if (imageCounter < animals.length -1){
     imageCounter++;
     console.log(imageCounter);
     } else {
@@ -79,7 +81,9 @@ function randomizer() {
   owls.splice(randomIndex, 1);
   } else {
   background(random(200, 255));
+  
   text("nothing left!", 50, 50);
+  textAlign(CENTER);
 }
 }
 
