@@ -5,14 +5,20 @@
   <body>
     <a-scene>
         <a-assets>
-          <a-asset-item id="crate-obj" src="res/obj/foodTruck.obj"></a-asset-item>
+          <a-asset-item id="truck-gltf" src ="res/gltf/foodTruck.gltf">  </a-asset-item>
+          <a-asset-item id="cart-gltf" src ="res/gltf/cart.gltf"></a-asset-item>
         </a-assets>
-      
+
+  
+        <a-entity gltf-model ="#truck-gltf"></a-entity>
         
-        <a-obj-model src="#crate-obj"></a-obj-model>
-      
 
         
+
+
+      
+
+
       <a-sky color="#ECECEC"></a-sky>
       </a-scene>
   </body>
