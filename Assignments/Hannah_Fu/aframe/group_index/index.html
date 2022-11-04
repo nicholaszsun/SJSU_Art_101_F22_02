@@ -17,18 +17,19 @@
         material = "color: #f2eddc; opacity: 0.5; transparent: true">
       </a-sphere>
 
-      <a-sphere 
-      body
-        position="0 1.25 -10" 
-        radius="5.25" 
-        material = "color: #f2e6f7; opacity: 0.5; transparent: true">
-      </a-sphere>
+         <a-sphere 
+            body
+            position="0 -0.25 -11" 
+            scale = "1 1 1.45"
+            radius="4.5" 
+            material = "color: #f2e6f7; opacity: 0.5; transparent: true">
+         </a-sphere>
 
-      <a-sphere 
-      nose
-        position="0 1.25 -1.9" 
-        radius="0.25" color="#EF2D5E">
-      </a-sphere>
+          <a-sphere 
+            nose
+            position="0 1.25 -1.9" 
+            radius="0.25" color="#EF2D5E">
+          </a-sphere>
 
       <a-sphere 
       eye right
@@ -38,10 +39,24 @@
       </a-sphere>
 
       <a-sphere 
-      eye right
+      eye right dot
+         position="1 2 -1.75" 
+         scale = "2 1 2"
+         radius="0.1" color="black">
+      </a-sphere>
+
+      <a-sphere 
+      eye left
           position="-1 2 -1.95" 
           scale = "1 1 1.5"
           radius="0.25" color="#abe075">
+      </a-sphere>
+
+      <a-sphere 
+      eye left dot
+          position="-1 2 -1.75" 
+          scale = "2 1 2"
+          radius="0.1" color="black">
       </a-sphere>
 
       <a-cylinder 
@@ -58,6 +73,36 @@
         height="4" 
         color="#C0DB9A">
       </a-plane>
+
+       <a-sphere 
+          eye ear left
+          position="-2 3.5 -4" 
+          rotation="30 0 0" 
+          scale = "2 2 7"
+          radius="0.2" color="#326635">
+      </a-sphere>
+
+      <a-sphere 
+        eye ear right
+        position="2 3.5 -4" 
+        rotation="30 0 0" 
+        scale = "2 2 7"
+        radius="0.2" color="#326635">
+      </a-sphere>
+
+      <a-sphere 
+      left front leg
+          position="-1.5 -4 -6.5" 
+          scale = "1 1 1.5"
+          radius="0.8" color="#473266">
+      </a-sphere>
+
+      <a-sphere 
+      right front leg
+          position="1.5 -4 -6.5" 
+          scale = "1 1 1.5"
+          radius="0.8" color="#473266">
+      </a-sphere>
 
       <a-entity 
         geometry="primitive: box" 
