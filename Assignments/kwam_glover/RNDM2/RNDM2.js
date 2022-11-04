@@ -1,3 +1,4 @@
+// Original P5 Sketch: which inpried my sketch: https://happycoding.io/examples/p5js/creating-classes/fireworks
 let particles = [];
 const gravity = .25;
 const colors = ['red', 'orange', 'yellow', 'lime', 'cyan', 'magenta', 'white'];
