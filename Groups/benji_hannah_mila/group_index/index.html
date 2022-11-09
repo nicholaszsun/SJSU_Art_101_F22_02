@@ -4,17 +4,50 @@
   </head>
   <body>
     <a-scene>
+     
+      <a-assets>
+        <a-asset-item id="bird" src="bird.obj"></a-asset-item>
+      
+      <audio  id="scream"
+        src = "scream.mp3">
+      </audio>
+
+      <audio  id="hooty"
+        src = "hooty.mp3">
+      </audio>
+
+      <audio  id="eating"
+        src = "eating.mp3">
+      </audio>
+
+      <audio  id="elevator"
+        src = "elevator.mp3">
+      </audio>
+    </a-assets>
+
+      <a-obj-model
+      bird
+        position="0 -0.25 -11"
+        rotation="180 0 20" 
+        color="#2d1b2e"
+        src="#bird" 
+        mtl="#bird"
+        sound = "src: #scream; autoplay: true; loop: true; volume: 2">
+      </a-obj-model>
+
       <a-box 
         position="-2 0.5 -3" 
         rotation="0 45 0" 
-        color="#4CC3D9">
+        color="#4CC3D9"
+        sound = "src: #elevator; autoplay: true; loop: true; volume: 2">
       </a-box>
 
       <a-sphere 
       head
         position="0 1.25 -5" 
         radius="3.25" 
-        material = "color: #f2eddc; opacity: 0.5; transparent: true">
+        material = "color: #f2eddc; opacity: 0.5; transparent: true"
+        sound = "src: #eating; autoplay: true; loop: true; volume: 5">
       </a-sphere>
 
          <a-sphere 
@@ -66,13 +99,6 @@
         color="#FFC65D">
       </a-cylinder>
 
-      <a-plane 
-        position="2 0 -4" 
-        rotation="-90 0 0" 
-        width="4" 
-        height="4" 
-        color="#C0DB9A">
-      </a-plane>
 
        <a-sphere 
           eye ear left
@@ -124,11 +150,75 @@
             radiusTop: 5.25"
         material="color: #c1bbc9; opacity: 0.75; transparent: true">
       </a-entity>
+    
+      <a-entity 
+      ice cream cone
+        position="3.35 4.5 -3.5" 
+        geometry="primitive: cone; 
+          radiusBottom: 1.0; 
+            radiusTop: 0.0"
+        rotation="-30 180 30"
+        material="color: #542f11; opacity: 1.0; transparent: true">
+      </a-entity>
+
+      <a-sphere 
+      mountain dew ice cream
+      position ="2.65 3.5. -4.05"
+      radius="1.25"
+      material="color: #29ff45; opacity: 0.75; transparent: true">
+      </a-sphere>
+
+      <a-sphere 
+      ice cream drop 1
+      position="2.0 3.0 -3.0" 
+      radius="0.35" color="#EF2D5E"
+      material="color: #29ff45; opacity: 0.75; transparent: true">
+    </a-sphere>
+
+    <a-sphere 
+      ice cream drop 2
+      position="2.4 2.65 -3.1" 
+      radius="0.25" color="#EF2D5E"
+      material="color: #29ff45; opacity: 0.75; transparent: true">
+    </a-sphere>
       
+    <a-sphere 
+    ice cream drop 3
+    position="2.0 3.6 -5.0" 
+    radius="0.6" color="#EF2D5E"
+    scale = "1 1.5 1"
+    material="color: #29ff45; opacity: 0.75; transparent: true">
+    </a-sphere>
 
-      
+  <a-sphere 
+    ice cream drop 4
+    position="3.0 2.3 -4.0" 
+    radius="0.6" color="#EF2D5E"
+    scale = "1 1 1.4"
+    material="color: #29ff45; opacity: 0.75; transparent: true">
+  </a-sphere>
 
+  <a-sphere 
+    ice cream drop 4
+    position="2.3 2.5 -3.5" 
+    radius="0.6" color="#EF2D5E"
+    scale = "1 1 1"
+    material="color: #29ff45; opacity: 0.75; transparent: true">
+  </a-sphere>
 
+  <a-sphere 
+  left front leg
+      position="-1.5 -4 -14.5" 
+      scale = "1 1 1.5"
+      radius="0.8" color="#473266">
+  </a-sphere>
+
+  <a-sphere 
+      right front leg
+          position="1.5 -4 -14.5" 
+          scale = "1 1 1.5"
+          radius="0.8" color="#473266">
+      </a-sphere>
       <a-sky color="#e4f5f5"></a-sky>
 
       <a-assets>
@@ -148,7 +238,8 @@
     <a-sphere 
     position="0 1 5" 
     radius="1.0" 
-    material = "color: #b39a57;">
+    material = "color: #b39a57;"
+    sound = "src: #hooty; autoplay: true; loop: true; volume: 1">
     </a-sphere>
     
     <a-sphere 
