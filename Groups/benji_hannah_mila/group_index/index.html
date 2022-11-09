@@ -4,17 +4,50 @@
   </head>
   <body>
     <a-scene>
+     
+      <a-assets>
+        <a-asset-item id="bird" src="bird.obj"></a-asset-item>
+      
+      <audio  id="scream"
+        src = "scream.mp3">
+      </audio>
+
+      <audio  id="hooty"
+        src = "hooty.mp3">
+      </audio>
+
+      <audio  id="eating"
+        src = "eating.mp3">
+      </audio>
+
+      <audio  id="elevator"
+        src = "elevator.mp3">
+      </audio>
+    </a-assets>
+
+      <a-obj-model
+      bird
+        position="0 -0.25 -11"
+        rotation="180 0 20" 
+        color="#2d1b2e"
+        src="#bird" 
+        mtl="#bird"
+        sound = "src: #scream; autoplay: true; loop: true; volume: 2">
+      </a-obj-model>
+
       <a-box 
         position="-2 0.5 -3" 
         rotation="0 45 0" 
-        color="#4CC3D9">
+        color="#4CC3D9"
+        sound = "src: #elevator; autoplay: true; loop: true; volume: 2">
       </a-box>
 
       <a-sphere 
       head
         position="0 1.25 -5" 
         radius="3.25" 
-        material = "color: #f2eddc; opacity: 0.5; transparent: true">
+        material = "color: #f2eddc; opacity: 0.5; transparent: true"
+        sound = "src: #eating; autoplay: true; loop: true; volume: 5">
       </a-sphere>
 
          <a-sphere 
@@ -205,7 +238,8 @@
     <a-sphere 
     position="0 1 5" 
     radius="1.0" 
-    material = "color: #b39a57;">
+    material = "color: #b39a57;"
+    sound = "src: #hooty; autoplay: true; loop: true; volume: 1">
     </a-sphere>
     
     <a-sphere 
