@@ -1,0 +1,41 @@
+<!--Center Hub-->
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="30 10 -3" rotation="0 45 0" color="#fff"></a-sphere>
+
+      <!--Space Cruiser-->
+
+      <a-obj-model 
+        position="-130 30 -30" 
+        animation="property: position; to: -30 10 -800; dur: 90000; easing: linear; loop: true" 
+        src="alicia_assets/space_cruiser.obj" 
+        mtl="alicia_assets/space_cruiser.mtl">
+      </a-obj-model>
+      <!--Space Cruiser End-->
+
+      <!--Rocks Test-->
+
+      <a-obj-model 
+       position="-12 12 -3" 
+       scale="0.02 .02 .02"
+       src="alicia_assets/space_rocks.obj" 
+       mtl="alicia_assets/space_rocks.mtl">
+      </a-obj-model>
+      <!--rock test end-->
+
+      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#000"></a-plane> -->
+      <a-sky color="#41404a"></a-sky>
+
+      <a-entity rotation="0 0 0" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        <a-sphere position="5 0 0" color="mediumseagreen"></a-sphere>
+      </a-entity>
+
+      <a-box position="-1 -1.6 -5" animation="property: position; to: 1 8 -10; dur: 4000; easing: linear; loop: true" color="tomato"></a-box>
+    </a-scene>
+  </body>
+</html>
