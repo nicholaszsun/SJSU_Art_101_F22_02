@@ -6,17 +6,24 @@
     <a-scene>
         <a-assets>
           
-        <a-asset-item id="" src ="res/gltf/ft2.gltf"></a-asset-item>
+          
+          <a-asset-item id="" src ="res/gltf/ft2.gltf"></a-asset-item>
           <a-asset-item id="truck-gltf" src ="res/gltf/foodTruck.gltf">  </a-asset-item>
           <a-asset-item id="cart-gltf" src ="res/gltf/cart.gltf"></a-asset-item>
           <a-asset-item id="light-gltf" src="res/gltf/scene_light.gltf"></a-asset-item>
-          <a-asset-item id="noLight-gltf" src="res/gltf/scene_nolight.gltf"></a-asset-item>
         </a-assets>
+
+
+        <!-- camera height -->
+        <a-entity camera="active: true" look-controls wasd-controls position="0 3.4 0"></a-entity>
 
         <a-entity gltf-model = "#light-gltf"></a-entity>
         <a-entity gltf-model ="#truck-gltf"></a-entity>
         <a-entity gltf-model ="#cart-gltf"></a-entity>
-        <a-entity gltf-model ="#noLight-gltf"></a-entity>
+        
+        
+        
+        
       
 
       <a-sky color="#1B2631"></a-sky>
