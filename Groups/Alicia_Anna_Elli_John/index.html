@@ -5,7 +5,10 @@
     <script src="https://unpkg.com/aframe-web-portals@1.0.1/dist/aframe-web-portals.umd.js"></script>
   </head>
   <body>
+
     <a-scene>
+      <a-sky color="#03112A" material="" geometry=""></a-sky>
+  
       <!--Camera-->
         <a-entity
         id="player"
@@ -45,6 +48,12 @@
 
       <!--Rocks Test-->
 
+      <a-sphere 
+      src="https://as1.ftcdn.net/v2/jpg/02/21/47/92/1000_F_221479270_5WgcQKg1sYkwsp7ba2nLh0v2A7CGVqHR.jpg"
+      position="35 12 42"
+      scale="2 2 2">
+      </a-sphere>
+      
       <a-obj-model 
        position="-12 12 -3" 
        scale="0.02 .02 .02"
@@ -74,8 +83,11 @@
 
       <!--rock test end-->
 
-      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#000"></a-plane> -->
-      <a-sky color="#41404a"></a-sky>
+
+
+
+
+
     </a-scene>
   </body>
 </html>
