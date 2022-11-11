@@ -6,17 +6,26 @@
     <a-scene>
 
       <a-assets>
-        <a-asset-item id="sandislandfinal-obj" src="sandislandfinal.obj"></a-asset-item>
+        <a-asset-item id="sandislandfinal2-obj" src="sandislandfinal2.obj"></a-asset-item>
+        <a-asset-item id="sandislandfinal2-mtl" src="sandislandfinal2.mtl"></a-asset-item>
         <a-asset-item id="coin" src="coin.glb"></a-asset-item>
+        <a-asset-item id="tbh" src="tbh.glb"></a-asset-item>
     </a-assets>
       <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      
       <a-entity gltf-model="#coin"></a-entity>
+      <a-entity gltf-model="#tbh"></a-entity>
 
+      <a-entity camera look-controls wasd-controls="fly:true" position="0 1.6 0"></a-entity>
+      
+      <a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
+
+      
 
       <a-sky color="#ECECEC"></a-sky>
 
-    <a-entity obj-model="obj:#sandislandfinal-obj;"></a-entity>
-    <!-- <a-obj-model src="#botle-obj" mtl="botle.mtl"></a-obj-model> -->
+    <!-- <a-entity obj-model="obj:#sandislandfinal-obj;"></a-entity> -->
+    <a-obj-model src="#sandislandfinal2-obj" mtl="sandislandfinal2.mtl"></a-obj-model>
   
     </a-scene>
   </body>
