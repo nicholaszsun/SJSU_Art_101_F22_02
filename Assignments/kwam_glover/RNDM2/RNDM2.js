@@ -1,14 +1,27 @@
+// Original P5 Sketch: which inspried my sketch: https://happycoding.io/examples/p5js/creating-classes/fireworks
 let particles = [];
 const gravity = .25;
 const colors = ['red', 'orange', 'yellow', 'lime', 'cyan', 'magenta', 'white'];
 let endColor;
 let houses;
+let stars;
+let sunX = 0
+let cloudx = 100;
+let cloudy = 100;
+
 
 function setup() {
-  pixelDensity(1);
+  pixelDensity(5);
 	createCanvas(600, 600);
 	endColor = color(64, 0);
 	makeHouses();
+  stars = createGraphics(width, height);
+  stars.background(32, 0, 64);
+  for(let i = 0; i < 1000; i++){
+    stars.stroke(255);
+    stars.strokeWeight(2);
+    stars.point(random(width), random(height));
+ }
 }
 
 function makeHouses() {
@@ -16,7 +29,7 @@ function makeHouses() {
 	houses.strokeWeight(2);
 	const houseCount = 10;
 	const houseWidth = width / houseCount;
-	const houseWindowWidth = 10;
+	const houseWindowWidth = 5;
 	const houseWindowHeight = 15;
 	for (let i = 0; i < houseCount; i++) {
 		const houseHeight = random(350, 100);
@@ -37,10 +50,9 @@ function makeHouses() {
 function mousePressed() {
 	particles.push(new Firework(mouseX, height));
 }
-  
 
 function draw() {
-	background(60,225,250);
+  image(stars, 0, 0);
 	particles.forEach((p) => {
 		p.step();
 		p.draw();
@@ -48,6 +60,24 @@ function draw() {
 	particles = particles.filter((p) => p.isAlive);
 
 	image(houses, 0, 0);
+  push()
+  fill('yellow')
+  noStroke()
+  circle(sunX, height / 9, 50)
+  sunX = (sunX + 3) % width
+  print(sunX)
+  pop()
+  makeCloud(cloudx, cloudy-50);
+  makeCloud(cloudx + 100, cloudy + 100);
+    cloudx+=0.05;
+
+}
+function makeCloud(cloudx, cloudy) {
+  fill(250)
+  noStroke();
+  ellipse(cloudx, cloudy, 70, 50);
+  ellipse(cloudx + 10, cloudy + 10, 70, 50);
+  ellipse(cloudx - 20, cloudy + 10, 70, 50);
 }
 
 class Particle {

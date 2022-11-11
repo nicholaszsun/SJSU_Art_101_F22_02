@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <title></title>
+
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+
+  </head>
+
+  <body>
+    <a-scene inspector="url: https://cdn.jsdelivr.net/gh/aframevr/aframe-inspector@master/dist/aframe-inspector.min.js" keyboard-shortcuts="" screenshot="" vr-mode-ui="" device-orientation-permission-ui="">
+      <!-- CAMERA Controls -->
+      <a-camera camera="" position="7.146934609243379 42.95177447425933 20.524705885737312" rotation="" look-controls="" wasd-controls="fly: true; acceleration: 50" data-aframe-inspector-original-camera="">
+        <a-entity id=camera cursor="" raycaster=""></a-entity> --&gt;
+         </a-camera>
+
+
+      <!-- Assets Management System -->
+      <a-assets>
+
+        <a-asset-item id="star-glb" material="color: #f4dc62" position="-0.47 -0.11953 -0.23668" src="assets/star.glb"></a-asset-item>
+   
+      </a-assets>
+      <a-sky id="sky" position="0 0 -0.28" color="black" material="; shader: flat; side: back" geometry=""></a-sky>
+      
+
+      <a-sphere id="big sphere" scale="1 1 1" position="0 1.25 -5" radius="1.25" material="" geometry="radius: 2"></a-sphere>
+      <a-plane id="floor" position="0 -10 0" material="color: #707070" scale="1000 1000 1000" geometry="height: 1; width: 1000" src="" height="0" width="100" rotation="-90 0 0" color="black"></a-plane>
+      
+        
+   <!-- Using the asset management system. -->
+          
+   <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
+   <a-obj-model id="star-glb" gltf-model="assets/star.glb" src="#star-glb" mtl="#star-glb"></a-obj-model>
+   <!-- <a-entity gltf-model="#star-glb"></a-entity> -->
+
+        <!-- <a-obj-model id="galaxy" src="#object-obj" position="" color="" height="10000" width="1000" material="" obj-model=""> </a-obj-model>
+        <a-obj-model id="star" src="#star-obj" mtl="star.mtl" position=""></a-obj-model> -->
+        <!-- <a-mtl-model id="star-mtl" src="#star-mtl" position="" color="" height="" width="" material="" obj-model=""> </a-obj-model> -->
+
+
+ 
+          
+         
+     
+      <div class="a-loader-title" style="display: none;">L17 The A-Frame Inspector</div>
+    </a-scene>
+  </body>
+</html>
