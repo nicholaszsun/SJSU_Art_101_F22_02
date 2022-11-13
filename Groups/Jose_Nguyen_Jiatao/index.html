@@ -1,3 +1,5 @@
+@@ -1,10 +1,13 @@
+<!DOCTYPE html>
 <html>
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
@@ -5,24 +7,18 @@
   <body>
     <a-scene>
         <a-assets>
+<head>  
+<meta charset=UTF-8>
+  <link rel"stylesheet" type="style.css" />
+</head>
+<body>
+  <script src="three.min.js"></script>
+  <script> src="OrbitControl.js"</script>
+  <a-assets>
           
           
           <a-asset-item id="" src ="res/gltf/ft2.gltf"></a-asset-item>
-          <a-asset-item id="truck-gltf" src ="res/gltf/foodTruck.gltf">  </a-asset-item>
-          <a-asset-item id="cart-gltf" src ="res/gltf/cart.gltf"></a-asset-item>
-          <a-asset-item id="light-gltf" src="res/gltf/scene_light.gltf"></a-asset-item>
-        </a-assets>
-
-
-        <!-- camera height -->
-        <a-entity camera="active: true" look-controls wasd-controls position="0 3.4 0"></a-entity>
-
-        <a-entity gltf-model = "#light-gltf"></a-entity>
-        <a-entity gltf-model ="#truck-gltf"></a-entity>
-        <a-entity gltf-model ="#cart-gltf"></a-entity>
-        
-        
-        
+@ -26,9 +29,26 @@
         
       
 
@@ -31,4 +27,27 @@
       </a-scene>
  
   </body>
+  <script>
+   let control= new THREE.Orbitcontrol(camera);
+   controls.addEventaddlistener('change,renderer');
+   controls.minDistance = 500
+   control.maxdistace= 1500
+
+   let maeterialArray = [];
+   let texture_cart= new THREE.TextureLoader().load('cart.gltf')
+  
+   maeterialArray.push(new THREE.meshBasicMaterial({map: texture_cart}));
+
+   let skybox = new THREE.BoxGeometry(10000,1000,1000);
+   let skybox = new Three.mesh(cart,maeterialArray);
+
+    animated();
+  }
+  function animated(){
+    renderer.render(scence,camera);
+    requestAnimationFrame(Animate)
+  }
+  init():
+  </script>
+</body>
 </html>
