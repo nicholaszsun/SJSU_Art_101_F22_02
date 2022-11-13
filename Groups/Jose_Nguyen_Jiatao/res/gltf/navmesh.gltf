@@ -1,0 +1,287 @@
+{
+    "asset" : {
+        "generator" : "Khronos glTF Blender I/O v3.3.27",
+        "version" : "2.0"
+    },
+    "scene" : 0,
+    "scenes" : [
+        {
+            "extras" : {
+                "flip_fluid" : {},
+                "flip_fluid_material_library" : {
+                    "library_path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library",
+                    "material_list" : [
+                        {
+                            "name" : "FF Water (iced)",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Water (iced).blend",
+                            "type" : 0,
+                            "icon_id" : 1049,
+                            "imported_icon_id" : 1050
+                        },
+                        {
+                            "name" : "FF Water (ocean volumetric)",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Water (ocean volumetric).blend",
+                            "type" : 0,
+                            "icon_id" : 1051,
+                            "imported_icon_id" : 1052
+                        },
+                        {
+                            "name" : "FF Water (clear)",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Water (clear).blend",
+                            "type" : 0,
+                            "icon_id" : 1053,
+                            "imported_icon_id" : 1054
+                        },
+                        {
+                            "name" : "FF Beer",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Beer.blend",
+                            "type" : 0,
+                            "icon_id" : 1055,
+                            "imported_icon_id" : 1056
+                        },
+                        {
+                            "name" : "FF Water (ocean 2)",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Water (ocean 2).blend",
+                            "type" : 0,
+                            "icon_id" : 1057,
+                            "imported_icon_id" : 1058
+                        },
+                        {
+                            "name" : "FF Caramel",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Caramel.blend",
+                            "type" : 0,
+                            "icon_id" : 1059,
+                            "imported_icon_id" : 1060
+                        },
+                        {
+                            "name" : "FF Blood",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Blood.blend",
+                            "type" : 0,
+                            "icon_id" : 1061,
+                            "imported_icon_id" : 1062
+                        },
+                        {
+                            "name" : "FF Coffee",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Coffee.blend",
+                            "type" : 0,
+                            "icon_id" : 1063,
+                            "imported_icon_id" : 1064
+                        },
+                        {
+                            "name" : "FF Copper",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Copper.blend",
+                            "type" : 0,
+                            "icon_id" : 1065,
+                            "imported_icon_id" : 1066
+                        },
+                        {
+                            "name" : "FF Wine Red",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Wine Red.blend",
+                            "type" : 0,
+                            "icon_id" : 1067,
+                            "imported_icon_id" : 1068
+                        },
+                        {
+                            "name" : "FF Water (ocean 1)",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Water (ocean 1).blend",
+                            "type" : 0,
+                            "icon_id" : 1069,
+                            "imported_icon_id" : 1070
+                        },
+                        {
+                            "name" : "FF Apple Juice",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Apple Juice.blend",
+                            "type" : 0,
+                            "icon_id" : 1071,
+                            "imported_icon_id" : 1072
+                        },
+                        {
+                            "name" : "FF Wax",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Wax.blend",
+                            "type" : 0,
+                            "icon_id" : 1073,
+                            "imported_icon_id" : 1074
+                        },
+                        {
+                            "name" : "FF Orange Juice",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Orange Juice.blend",
+                            "type" : 0,
+                            "icon_id" : 1075,
+                            "imported_icon_id" : 1076
+                        },
+                        {
+                            "name" : "FF Milk",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Milk.blend",
+                            "type" : 0,
+                            "icon_id" : 1077,
+                            "imported_icon_id" : 1078
+                        },
+                        {
+                            "name" : "FF Chocolate",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/surface/FF Chocolate.blend",
+                            "type" : 0,
+                            "icon_id" : 1079,
+                            "imported_icon_id" : 1080
+                        },
+                        {
+                            "name" : "FF Spray",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/whitewater/FF Spray.blend",
+                            "type" : 1,
+                            "icon_id" : 1081,
+                            "imported_icon_id" : 1082
+                        },
+                        {
+                            "name" : "FF Bubble",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/whitewater/FF Bubble.blend",
+                            "type" : 1,
+                            "icon_id" : 1083,
+                            "imported_icon_id" : 1084
+                        },
+                        {
+                            "name" : "FF Foam",
+                            "description" : "",
+                            "path" : "/Users/davidbayus/Library/Application Support/Blender/3.4/scripts/addons/flip_fluids_addon/materials/material_library/whitewater/FF Foam.blend",
+                            "type" : 1,
+                            "icon_id" : 1085,
+                            "imported_icon_id" : 1086
+                        }
+                    ]
+                },
+                "automirror" : {
+                    "orientation" : 1,
+                    "apply_mirror" : 1,
+                    "axis" : 1
+                }
+            },
+            "name" : "Scene",
+            "nodes" : [
+                0
+            ]
+        }
+    ],
+    "nodes" : [
+        {
+            "mesh" : 0,
+            "name" : "navmesh",
+            "translation" : [
+                -34.07477569580078,
+                0.6962082386016846,
+                155.68206787109375
+            ]
+        }
+    ],
+    "meshes" : [
+        {
+            "name" : "Plane.011",
+            "primitives" : [
+                {
+                    "attributes" : {
+                        "POSITION" : 0,
+                        "NORMAL" : 1,
+                        "TANGENT" : 2,
+                        "TEXCOORD_0" : 3
+                    },
+                    "indices" : 4
+                }
+            ]
+        }
+    ],
+    "accessors" : [
+        {
+            "bufferView" : 0,
+            "componentType" : 5126,
+            "count" : 37,
+            "max" : [
+                167.77102661132812,
+                0,
+                79.16305541992188
+            ],
+            "min" : [
+                -105.31822967529297,
+                0,
+                -74.02584838867188
+            ],
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 1,
+            "componentType" : 5126,
+            "count" : 37,
+            "type" : "VEC3"
+        },
+        {
+            "bufferView" : 2,
+            "componentType" : 5126,
+            "count" : 37,
+            "type" : "VEC4"
+        },
+        {
+            "bufferView" : 3,
+            "componentType" : 5126,
+            "count" : 37,
+            "type" : "VEC2"
+        },
+        {
+            "bufferView" : 4,
+            "componentType" : 5123,
+            "count" : 96,
+            "type" : "SCALAR"
+        }
+    ],
+    "bufferViews" : [
+        {
+            "buffer" : 0,
+            "byteLength" : 444,
+            "byteOffset" : 0,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 444,
+            "byteOffset" : 444,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 592,
+            "byteOffset" : 888,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 296,
+            "byteOffset" : 1480,
+            "target" : 34962
+        },
+        {
+            "buffer" : 0,
+            "byteLength" : 192,
+            "byteOffset" : 1776,
+            "target" : 34963
+        }
+    ],
+    "buffers" : [
+        {
+            "byteLength" : 1968,
+            "uri" : "data:application/octet-stream;base64,3sgFwgAAAACjw5xC9KO8QQAAAACjw5xC3sgFwgAAAAD4gRDB9KO8QQAAAAD4gRDB+IEQwQAAAAA8DZTC+IEQQQAAAAA8DZTC+IEQQQAAAAA8DZTC5VC/QQAAAADSIFvC5VC/QQAAAADSIFvC3sgFwgAAAADSIFvCBp23QgAAAAA8DZTCBp23QgAAAADEzV3CBp23QgAAAADEzV3C76LSwgAAAAA8DZTC76LSwgAAAAAs3V/ChCbvwQAAAAA8DZTC4hJEwgAAAAB/J1zC76LSwgAAAAAp5l5C4hJEwgAAAAAp5l5C76LSwgAAAAB8U55C4hJEwgAAAAB8U55CYsUnQwAAAAAos19CYsUnQwAAAACjw5xC3sgFwgAAAAAos19C9KO8QQAAAAAos19Cp7YgQgAAAADnxFvCp7YgQgAAAADnxFvC/uLmQQAAAAA8DZTC/uLmQQAAAAA8DZTC4Fm/QgAAAAAos19C4Fm/QgAAAAAos19C4Vm/QgAAAACjw5xCDOnfQgAAAACjw5xCC+nfQgAAAAAos19Ck3sYQgAAAAAos19Ck3sYQgAAAAAos19ClHsYQgAAAACjw5xCAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAP//fz8AAACAAAAAAAAAgD8AAACAAAAAAP//fz8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAP//fz8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAP//fz8AAACAAAAAAAAAgD8AAACAAAAAAP//fz8AAACAAAAAAAAAgD8AAACAAAAAAP//fz8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACAAAAAAP//fz8AAACAAAAAAAAAgD8AAACAAAAAAAAAgD8AAACA//9/PwAAAAAAAACAAACAPwAAgD8AAAAAAAAAgAAAgD8AAIA/AAAAAAAAAIAAAIA/AACAPwAAAAAAAACAAACAPwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIA///9/PwAAAAAAAACAAACAPwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAgD8AAAAAAAAAgAAAgL8AAIA/AAAAAAAAAIAAAIC/AACAPwAAAAAAAACAAACAvwAAAAAAAIA/AACAPwAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/AAAAAAAAAAAAAAAAAACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgDMAAAAAAAAAAAAAAAAAAIAzAAAAAAAAAAAAAAAAAAAANAAAgD9nOz4/AACAPwAAgD8AAAAAZzs+PwAAgD9nOz4/AACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAAACAPwAAAAAAAIA/Zzs+PwAAgD9nOz4/AACAPwAAgD8AAIA/AACAPwAAgD9nOz4/AACAP2c7Pj8AAIA/Zzs+PwAAgD8AAIA/FwAYAAMAFwADAAIACQAIAAYACQAGAAQAAgADAAgAAgAIAAkAHAAaAAwAHAAMAAoAEAAPAA0AEAANAA4ACQAEAA8ACQAPABAAEAAOABEAEAARABIAEgAUAAAAEgAAABcAEgARABMAEgATABQAAAABABgAAAAYABcAIQAgABYAIQAWABUABQAHABkABQAZABsAIwAkAB8AIwAfAB4AHgAfACAAHgAgACEAGAABACQAGAAkACMAIgAdAAsAIgALABkA"
+        }
+    ]
+}
