@@ -9,14 +9,25 @@
       <a-sky id="a-sky" src="background.jpeg" material="; color: #ffffff" geometry=""></a-sky>
 
       <a-assets>
-        <a-asset-item id="ice-obj" rotation="0 4.65626519438223 0" animation="loop: NaN" material="color: #dca3a3" position="0 4 -4" src="icecream.obj"></a-asset-item>
+        <a-asset-item id="ice-obj" src="icecream.obj"></a-asset-item>
+        <a-asset-item id="cherry-obj" src="cherry.obj" ></a-asset-item>
       </a-assets>
 
-      <a-obj-model id="ice-obj" scale="" src="#ice-obj" position="0 4 -4" color="#dca3a3" material="" obj-model="" animation="property: rotation; to: 0 360 0; loop: true; dur: 40000" animation__2="property: visible; from: false; to: true; dur: 1" visible="" rotation="0 24.114376502934647 0">
+      <a-mixin id="orbit" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear;"></a-mixin>
+
+      <a-obj-model id="ice-obj" scale="" src="#ice-obj" position="0 2 -2" color="#dca3a3" material="color: #dca3a3" obj-model="" animation="property: rotation; to: 0 360 0; loop: true; dur: 40000; easing: linear;">
       </a-obj-model>
 
+      <a-entity mixin="orbit" position="0 0 -2">
+        <a-obj-model id="cherry-obj" src="#cherry-obj" position="4 3 1" radius=".8" material="color: #a21616" obj-model="" scale="0.5 0.5 0.5" animation="property: rotation; to: 0 360 360; loop: true; dur: 40000; easing: linear;"></a-obj-model>
+      </a-entity>
+      
+
+      
       <a-sound src="spacey.mp3" autoplay="true" loop="true" position="0 0 -4"></a-sound>
-  <div class="a-loader-title" style="display: none;"></div></a-scene>
+
+      <div class="a-loader-title" style="display: none;"></div>
+  </a-scene>
 
 
     
