@@ -1,0 +1,72 @@
+<!--Center Hub-->
+<html>
+  <head>
+    <title>Center Hub</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-web-portals@1.0.1/dist/aframe-web-portals.umd.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!--Camera-->
+        <a-entity
+        id="player"
+        position="0 1.6 0"
+        camera
+        wasd-controls="acceleration: 15;"
+        look-controls="pointerLockEnabled: false"
+        >
+        <a-cursor position="0 0 -.05" scale=".04 .04 .01"></a-cursor>
+      
+        <!--For Collision Detection-->
+        <a-cylinder radius="0.75"></a-cylinder>
+        </a-entity>
+
+      <!--Camera END-->
+
+      <!--Web Portal-->
+
+      <a-entity 
+      id="portal"
+       position="-20 0 -20" 
+       web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups/Alicia_Anna_Eli_John/index.html; text:Go Next;">
+      </a-entity>
+
+      <a-entity 
+      id="portal2"
+       position="0 0 0" 
+       web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups/Alicia_Anna_Eli_John/index1.html; text:Go Next;">
+      </a-entity>
+
+      <!--Space Cruiser-->
+
+      <a-obj-model 
+        position="-130 30 -30" 
+        animation="property: position; to: -30 10 -800; dur: 90000; easing: linear; loop: true" 
+        src="assets/space_cruiser.obj" 
+        mtl="assets/space_cruiser.mtl">
+      </a-obj-model>
+      <!--Space Cruiser End-->
+
+      <!--Rocks Test-->
+
+      <a-obj-model 
+       position="-12 12 -3" 
+       scale="0.02 .02 .02"
+       src="assets/space_rocks.obj" 
+       mtl="assets/space_rocks.mtl">
+      </a-obj-model>
+
+      <a-obj-model 
+      position="-20 2 -20" 
+      scale="0.02 .02 .02"
+      src="assets/space_rocks.obj" 
+      mtl="assets/space_rocks.mtl">
+     </a-obj-model>
+
+      <!--rock test end-->
+
+      <!-- <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#000"></a-plane> -->
+      <a-sky color="#41404a"></a-sky>
+    </a-scene>
+  </body>
+</html>

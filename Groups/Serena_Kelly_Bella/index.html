@@ -11,16 +11,18 @@
         <a-asset-item id="coin" src="coin.glb"></a-asset-item>
         <a-asset-item id="tbh2" src="tbh2.glb"></a-asset-item>
     </a-assets>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
       
-      <a-entity gltf-model="#coin"></a-entity>
+      <a-entity position="-50 0 -50" rotation="0 -90 0" scale="1.5 1.5 1.5" gltf-model="#coin"></a-entity>
 
       <a-entity position=" 30 0 -4" gltf-model="#tbh2"></a-entity>
 
       <a-entity camera look-controls wasd-controls="fly:true" position="0 1.6 0"></a-entity>
       
-      <a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
-
+      <a-entity light="color: #E8EC61; intensity: 1.5" position="100 25 -75" rotation="0,90,0"></a-entity>
+      <a-entity light="color: #FFFFF; intensity: 1.5"scale="2 2 2" position="-50 100 -50"></a-entity>
+      <a-entity light="color: #8B6DE8; intensity: 2" position="20 25 -25" rotation="0,90,0"></a-entity>
+      <a-entity light="color: #8B6DE8; intensity: 1.5" position="30 25 75" rotation="0,-90,0"></a-entity>
       
 
       <a-sky color="#ECECEC"></a-sky>

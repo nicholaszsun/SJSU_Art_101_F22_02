@@ -1,34 +1,54 @@
+
+<!DOCTYPE html>
 <html>
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+  
+
   </head>
+    
+      
+
+
   <body>
+
+    <!-- assets-->
+    <a-assets>
+        
+        
+      <a-asset-item id="mainScene" src ="res/gltf/mainScene.glb"></a-asset-item>
+      <a-asset-item id="lighting" src ="res/gltf/light.glb"></a-asset-item>
+      
+     
+    
+    
+    </a-assets>
+
     <a-scene>
-        <a-assets>
-          
-          
-          <a-asset-item id="" src ="res/gltf/ft2.gltf"></a-asset-item>
-          <a-asset-item id="truck-gltf" src ="res/gltf/foodTruck.gltf">  </a-asset-item>
-          <a-asset-item id="cart-gltf" src ="res/gltf/cart.gltf"></a-asset-item>
-          <a-asset-item id="light-gltf" src="res/gltf/scene_light.gltf"></a-asset-item>
-        </a-assets>
-
-
-        <!-- camera height -->
-        <a-entity camera="active: true" look-controls wasd-controls position="0 3.4 0"></a-entity>
-
-        <a-entity gltf-model = "#light-gltf"></a-entity>
-        <a-entity gltf-model ="#truck-gltf"></a-entity>
-        <a-entity gltf-model ="#cart-gltf"></a-entity>
-        
-        
-        
-        
       
-
-      <a-sky color="#1B2631"></a-sky>
+            
       
-      </a-scene>
- 
+    <!--scene setup-->
+      <a-entity id="rig" position="-37.994 0 161.481" movement-controls =" speed:1">
+        <a-entity id="camera" camera look-controls position="0 2.4 0"></a-entity>
+      </a-entity>
+
+     
+      <a-entity id="amb_str1" position="-41.269 0 29.01068" sound="src: res/sound/streetnoise1.wav; autoplay: true; loop: true"></a-entity>
+      <a-entity id="amb_str2" position="33.67575 0 22.91788" sound="src: res/sound/streetnoise2.wav; autoplay: true; loop: true"></a-entity>
+      <a-entity id="amb_str3" position="-8.20862 0 22.91788" sound="src: res/sound/streetnoise3.wav; autoplay: true; loop: true"></a-entity>
+
+      <a-entity gltf-model="#mainScene"></a-entity>
+      <a-entity gltf-model="#lighting"></a-entity>
+      <a-entity light="color:  #ec0909;  intensity:  0.86"></a-entity>
+      <a-sky color="#000000"></a-sky>
+      <a-entity light="type: ambient; color: #F7EBB7; intensity: 0.2"></a-entity>
+
+    </a-scene>
+  
   </body>
+
+
+
 </html>
