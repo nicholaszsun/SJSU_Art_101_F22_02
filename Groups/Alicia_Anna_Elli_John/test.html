@@ -1,6 +1,7 @@
 <!--Center Hub-->
 <html>
   <head>
+    <title>Center Hub</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-web-portals@1.0.1/dist/aframe-web-portals.umd.js"></script>
   </head>
@@ -25,7 +26,14 @@
       <!--Web Portal-->
 
       <a-entity 
+      id="portal"
        position="-20 0 -20" 
+       web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups/Alicia_Anna_Elli_John/index.html; text:Go Next;">
+      </a-entity>
+
+      <a-entity 
+      id="portal2"
+       position="0 0 0" 
        web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups/Alicia_Anna_Elli_John/index.html; text:Go Next;">
       </a-entity>
 
