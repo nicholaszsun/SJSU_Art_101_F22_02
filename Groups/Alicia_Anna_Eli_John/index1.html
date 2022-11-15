@@ -76,6 +76,10 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups
           <!-- <a-asset-item id="planet0-obj" src="assets/planet0.obj"></a-asset-item> -->
           <!-- <a-asset-item id="ast" src="assets/ast.obj"></a-asset-item>
           <a-asset-item id="ast-mtl" src="assets/ast.mtl"></a-asset-item> -->
+
+          <a-asset-item id="ice-obj" src="assets/icecream.obj"></a-asset-item>
+          <a-asset-item id="cherry-obj" src="assets/cherry.obj" ></a-asset-item>
+
         </a-assets>
 
         <!-- <a-obj-model src="#env-obj"></a-obj-model>
@@ -231,6 +235,19 @@ animation="property: rotation; to: 360 0 360; loop: true; dur: 5000"
 src="assets/s3.obj"
 mtl="assets/s3.mtl" >
 </a-obj-model>
+
+
+
+<a-mixin id="orbit" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear;"></a-mixin>
+
+<a-obj-model id="ice-obj" scale="" src="#ice-obj" position="0 2 12" color="#dca3a3" material="color: #dca3a3" obj-model="" animation="property: rotation; to: 0 360 0; loop: true; dur: 40000; easing: linear;">
+</a-obj-model>
+
+<a-entity mixin="orbit" position="0 0 12">
+  <a-obj-model id="cherry-obj" src="#cherry-obj" position="4 3 1" radius=".8" material="color: #a21616" obj-model="" scale="0.5 0.5 0.5" animation="property: rotation; to: 0 360 360; loop: true; dur: 40000; easing: linear;"></a-obj-model>
+</a-entity>
+
+
 
       </a-scene>
 
