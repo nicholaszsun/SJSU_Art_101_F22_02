@@ -5,7 +5,6 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
 
   </head>
@@ -30,17 +29,18 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/
 <!-- Assets Management System -->
 <a-assets>
   <a-asset-item id="star-glb" gltf-model="assets/star.glb" obj-model="mtl: assets/star.glb" src="assets/star.glb"></a-asset-item>
-  <a-asset-item id="starAnimated-glb" scale="100 100 100" gltf-model="assets/starAnimated.glb" obj-model="mtl: assets/starAnimated.glb" src="assets/starAnimated.glb"></a-asset-item>
-  <a-asset-item id="texture-glb" rotation="20 90 129.81744508193628" gltf-model="assets/texture.glb" obj-model="mtl: assets/texture.glb" src="assets/texture.glb"></a-asset-item>
+  <!-- <a-asset-item id="starAnimated-glb" scale="100 100 100" gltf-model="assets/starAnimated.glb" obj-model="mtl: assets/starAnimated.glb" src="assets/starAnimated.glb"></a-asset-item> -->
+  <!-- <a-asset-item id="texture-glb" rotation="20 90 129.81744508193628" gltf-model="assets/texture.glb" obj-model="mtl: assets/texture.glb" src="assets/texture.glb"></a-asset-item> -->
   <a-asset-item id="music" src="assets/discoo_in_space.mp3"></a-asset-item>
 </a-assets>
 
 <!-- Galaxy -->
-<a-gltf-model dynamic-body="" id="texture-glb" gltf-model="assets/texture.glb" scale="15 15 15" rotation="0 0 0" animation="property: rotation; to: 0 720 720; loop: tue; dur: 150000; from: 0 0 0; delay: 0.5" src="#texture-glb" position="0 31 -20" color="" height="10000" width="1000" material="" obj-model="mtl: assets/texture.glb">
+<!-- <a-gltf-model dynamic-body="" id="texture-glb" gltf-model="assets/texture.glb" scale="15 15 15" rotation="0 0 0" animation="property: rotation; to: 0 720 720; loop: tue; dur: 150000; from: 0 0 0; delay: 0.5" src="#texture-glb" position="0 31 -20" color="" height="10000" width="1000" material="" obj-model="mtl: assets/texture.glb"> -->
 </a-gltf-model>
 
 <a-sky color="#03112A" material="" geometry=""></a-sky>
 <a-entity id="sun" scale="5 5 5" position="-0.94592 4.5395 -1.25921" light="type: point; intensity: 10; color: #FFF36E; decay: 0.07; distance: 800; penumbra: 0.3"></a-entity>
+
 <!-- Animation Test -->
 <a-gltf-model dynamic-body="" id="star1-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="20 90 450" animation="property: position; to: 40 -100 0; loop: NaN; true: 10000; from: 40 100 0; delay: 0.5" animation__2="property: rotation; to: 20 90 450; loop: NaN; dur: 950; from: 20 90 90; delay: 0.5" src="#star-glb" position="40 -100 0" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
 </a-gltf-model>
@@ -61,8 +61,8 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/
 
 
 
-<a-gltf-model dynamic-body="" id="starAnimated-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/starAnimated.glb" scale="45 45 45" rotation="0 294.9287750420535 294.9287750420535" animation-mixer="clip: 0; duration: 850; crossFadeDuration: 0.7; loop: true" animation="to: 0 0 0; type: rotation; property: rotation; from: 0 360 360; dur: 20000" src="#starAnimated-glb" position="" color="" height="10000" width="1000" material="shader:" obj-model="; mtl: assets/starAnimated.glb">
-</a-gltf-model>
+<!-- <a-gltf-model dynamic-body="" id="starAnimated-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/starAnimated.glb" scale="45 45 45" rotation="0 294.9287750420535 294.9287750420535" animation-mixer="clip: 0; duration: 850; crossFadeDuration: 0.7; loop: true" animation="to: 0 0 0; type: rotation; property: rotation; from: 0 360 360; dur: 20000" src="#starAnimated-glb" position="" color="" height="10000" width="1000" material="shader:" obj-model="; mtl: assets/starAnimated.glb">
+</a-gltf-model> -->
 
 
 
