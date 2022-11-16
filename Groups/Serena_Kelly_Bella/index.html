@@ -9,20 +9,32 @@
         <a-asset-item id="sandislandfinal2-obj" src="sandislandfinal2.obj"></a-asset-item>
         <a-asset-item id="sandislandfinal2-mtl" src="sandislandfinal2.mtl"></a-asset-item>
         <a-asset-item id="coin" src="coin.glb"></a-asset-item>
-        <a-asset-item id="tbh" src="tbh.glb"></a-asset-item>
+        <a-asset-item id="smunozworld1" src="smunozworld1.glb"></a-asset-item>
     </a-assets>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+
       
-      <a-entity gltf-model="#coin"></a-entity>
-      <a-entity gltf-model="#tbh"></a-entity>
+      <a-entity position="-50 0 -50" rotation="0 -90 0" scale="1.5 1.5 1.5" gltf-model="#coin"></a-entity>
+
+      <a-entity position= "0 0 -67" scale="0.95 0.95 0.95" gltf-model="#smunozworld1"></a-entity>
+      <!-- <a-entity position=" 30 0 -4" gltf-model="#tbh2"></a-entity> -->
 
       <a-entity camera look-controls wasd-controls="fly:true" position="0 1.6 0"></a-entity>
       
-      <a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
+      <a-entity light="color: #E8EC61; intensity: .5" position="100 25 -75" rotation="0,90,0"></a-entity>
+      <a-entity light="color: #FFFFF; intensity: .5"scale="2 2 2" position="-50 100 -50"></a-entity>
+      <a-entity light="color: #8B6DE8; intensity: .5" position="20 25 -25" rotation="0,90,0"></a-entity>
+      <a-entity light="color: #8B6DE8; intensity: .5" position="30 25 75" rotation="0,-90,0"></a-entity>
+      
+      <a-entity light="color: #8B6DE8; intensity: 0.7" position=" 25 100 50" rotation="0,0,90"></a-entity>
+      <a-entity light="color: #EFC14C; intensity: 1.3" scale="0.25 0.25 0.25" position=" -25 150 25" rotation="0,0,90"></a-entity>
+
+      <a-entity light="color: #A924FF; intensity: 0.4" position=" 30 100 -100" rotation="0,90,0"></a-entity>
+      <a-entity light="color: #96FF24; intensity: 0.5s" position=" 30 100 -100" rotation="0,-90,0"></a-entity>
 
       
 
-      <a-sky color="#ECECEC"></a-sky>
+
+      <a-sky color="#161616"></a-sky>
 
     <!-- <a-entity obj-model="obj:#sandislandfinal-obj;"></a-entity> -->
     <a-obj-model src="#sandislandfinal2-obj" mtl="sandislandfinal2.mtl"></a-obj-model>

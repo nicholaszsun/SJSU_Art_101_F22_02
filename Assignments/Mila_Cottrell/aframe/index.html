@@ -4,10 +4,34 @@
   </head>
   <body>
      <a-scene>
-      <a-box position="0 0.5 0" rotation="0 45 0" color="#8d49cc"></a-box>
+      <a-assets>
+        <img id="sky" src="https://raw.githubusercontent.com/SJSU-CADRE-CLASSES/SJSU_Art_101_F22_02/main/Assignments/Mila_Cottrell/aframe/sky.jpeg">
+      </a-assets>
+      <a-sky src="#sky"></a-sky>
+
       <a-sphere position="0 1.25 0" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="0 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
       <a-plane position="0 0 4" rotation="-90 0 0" width="8" height="8" color="#7BC8A4"></a-plane>
+      
+      <a-sphere
+      src="https://raw.githubusercontent.com/SJSU-CADRE-CLASSES/SJSU_Art_101_F22_02/main/Assignments/Mila_Cottrell/aframe/Polly_Chibi_Tiny_Tales.jpg" 
+      position="0 2 8" 
+      radius="1.25"
+      rotation="0 220 0"
+      material = "opacity">
+      </a-sphere>
+
+      <a-box src="https://raw.githubusercontent.com/SJSU-CADRE-CLASSES/SJSU_Art_101_F22_02/main/Assignments/Mila_Cottrell/aframe/water_textures.jpg" 
+      position="0 2 0" 
+      rotation="0 45 0" 
+      color="#8d49cc">
+      </a-box>
+
+      <a-box src="https://raw.githubusercontent.com/SJSU-CADRE-CLASSES/SJSU_Art_101_F22_02/main/Assignments/Mila_Cottrell/aframe/grin_hooty.png" 
+      position="0 1 4" 
+      rotation="0 45 0">
+      </a-box>
+
 
       <a-sphere 
         position="0 1.25 5" 
@@ -59,15 +83,6 @@
       material = "color: #ffffff;">
       </a-sphere>
 
-      <a-triangle 
-      position="0 1.2 7" 
-      vertexA="0 0.5 0"
-      vertexB="-0.5 -0.5 0"
-      vertexC="0.5 -0.5 0"
-      rotation="-90 30 30"
-      material = "color: #b37d22;">
-      </a-triangle>
-
       <a-entity
     geometry="primitive: box"
     position="0 2 0"
@@ -76,7 +91,6 @@
     htmltexture="asset: #bears"
     material="opacity: 0.5; transparent: true">
      </a-entity>
-      <a-sky color="#7adeff"></a-sky>
     </a-scene>
   </body>
 </html> 
