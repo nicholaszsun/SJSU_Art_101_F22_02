@@ -29,16 +29,26 @@
       
             
       
-    <!--scene setup-->
+      <!--camera setup-->
       <a-entity id="rig" position="-37.994 0 161.481" movement-controls =" speed:1">
         <a-entity id="camera" camera look-controls position="0 2.4 0"></a-entity>
       </a-entity>
 
      
-      <a-entity id="amb_str1" position="-41.269 0 29.01068" sound="src: res/sound/streetnoise1.wav; autoplay: true; loop: true"></a-entity>
-      <a-entity id="amb_str2" position="33.67575 0 22.91788" sound="src: res/sound/streetnoise2.wav; autoplay: true; loop: true"></a-entity>
-      <a-entity id="amb_str3" position="-8.20862 0 22.91788" sound="src: res/sound/streetnoise3.wav; autoplay: true; loop: true"></a-entity>
+      <!--sound-->
+      <a-entity id="amb_all" position="-41.269 138.44838 32.0608" sound="src: res/sound/ac_noise.wav; autoplay: true; loop: true; rolloffFactor: 0; volume: 0.1"></a-entity>
+      <a-entity id="amb_str1" position="-41.269 0 29.01068" sound="src: res/sound/streetnoise1.wav; autoplay: true; loop: true; distanceModel: exponential; volume: 0.8; rolloffFactor: 1.10""></a-entity>
+      <a-entity id="amb_str2" position="33.67575 0 22.91788" sound="src: res/sound/streetnoise2.wav; autoplay: true; loop: true; distanceModel: exponential; volume: 0.8; rolloffFactor: 1.10""></a-entity>
+      <a-entity id="amb_str3" position="-8.20862 0 22.91788" sound="src: res/sound/streetnoise3.wav; autoplay: true; loop: true; distanceModel: exponential; volume: 0.8; rolloffFactor: 1.10""></a-entity>
+      <a-entity id="amb_lghtbzz" position="-4.58737 26.86596 52.98488" sound="src: res/sound/lightbuzz.wav; autoplay: true; loop: true; distanceModel: exponential; rolloffFactor: 1.15"></a-entity>
+      
+      <a-entity id="amb_bush1" position="-163.02474 18.41175 -41.47427" sound="src: res/sound/bush.wav; autoplay: true; loop: true; distanceModel: exponential; volume: 1; rolloffFactor: 1" "=""></a-entity>
+      <a-entity id="amb_criket1" position="-163.02474 18.41175 -41.47427" sound="src: res/sound/cricketsound.wav; autoplay: true; loop: true; distanceModel: exponential; volume: 1; rolloffFactor: 1" "=""></a-entity>
+      <a-entity id="amb_bush2" position="60.48523 18.41175 -167.41641" sound="src: res/sound/bush.wav; autoplay: true; loop: true; distanceModel: exponential"></a-entity>
+      <a-entity id="amb_bush2" position="60.48523 18.41175 -167.41641" sound="src: res/sound/bush.wav; autoplay: true; loop: true; distanceModel: exponential"></a-entity>
 
+
+      <!--scene setup-->
       <a-entity gltf-model="#mainScene"></a-entity>
       <a-entity gltf-model="#lighting"></a-entity>
       <a-entity light="color:  #ec0909;  intensity:  0.86"></a-entity>
