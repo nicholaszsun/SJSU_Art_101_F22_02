@@ -1,0 +1,12 @@
+# Blender MTL File: 'space_rocks.blend'
+# Material Count: 1
+
+newmtl Material
+Ns 411.736129
+Ka 1.000000 1.000000 1.000000
+Kd 0.037410 0.037410 0.037410
+Ks 0.000000 0.000000 0.000000
+Ke 0.239723 0.272892 0.331023
+Ni 1.450000
+d 1.000000
+illum 1

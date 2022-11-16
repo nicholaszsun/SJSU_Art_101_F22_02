@@ -19,8 +19,9 @@
       <a-assets>
 
         <a-asset-item id="star-glb" material="color: #f4dc62" position="-0.47 -0.11953 -0.23668" src="assets/star.glb"></a-asset-item>
-   
-      </a-assets>
+        <a-asset-item id="galaxy-gltf" material="color: #f4dc62" position="-0.47 -0.11953 -0.23668" src="assets/galaxy.gltf"> </a-asset-item>
+        <a-mtl-item id="grass" mtl="assets/grass.mov"></a-mtl-item>
+    </a-assets>
       <a-sky id="sky" position="0 0 -0.28" color="black" material="; shader: flat; side: back" geometry=""></a-sky>
       
 
@@ -31,7 +32,7 @@
    <!-- Using the asset management system. -->
           
    <!-- Defining the URL inline. Not recommended but may be more comfortable. -->
-   <a-obj-model id="star-glb" gltf-model="assets/star.glb" src="#star-glb" mtl="#star-glb"></a-obj-model>
+   <a-gltf-model id="galaxy-gltf" gltf-model="assets/galaxy.gltf" src="#galaxy-gltf" mtl="#grass-mov"></a-gltf-model>
    <!-- <a-entity gltf-model="#star-glb"></a-entity> -->
 
         <!-- <a-obj-model id="galaxy" src="#object-obj" position="" color="" height="10000" width="1000" material="" obj-model=""> </a-obj-model>

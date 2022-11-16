@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-assets>
+        <a-asset-item id="sandislandfinal2-obj" src="sandislandfinal2.obj"></a-asset-item>
+        <a-asset-item id="sandislandfinal2-mtl" src="sandislandfinal2.mtl"></a-asset-item>
+        <a-asset-item id="coin" src="coin.glb"></a-asset-item>
+        <a-asset-item id="tbh2" src="tbh2.glb"></a-asset-item>
+    </a-assets>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      
+      <a-entity gltf-model="#coin"></a-entity>
+      <a-entity gltf-model="#tbh2"></a-entity>
+      <a-entity position="10000 200 -4" rotation="0 -90 0" gltf-model="#sandislandfinal2"></a-entity>
+
+      <a-entity camera look-controls wasd-controls="fly:true" position="0 1.6 0"></a-entity>
+      
+      <a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
+
+      
+
+      <a-sky color="#ECECEC"></a-sky>
+
+    <!-- <a-entity obj-model="obj:#sandislandfinal-obj;"></a-entity> -->
+    <a-obj-model src="#sandislandfinal2-obj" mtl="sandislandfinal2.mtl"></a-obj-model>
+  
+    </a-scene>
+  </body>
+</html>
