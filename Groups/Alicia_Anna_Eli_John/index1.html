@@ -6,12 +6,33 @@
   <body>
     <a-scene>
        <!-- CAMERA Controls for Computer -->
- <a-camera camera="active: false" position="6.708581036335192 74.33815252100558 -32.950356687483534" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true; acceleration: 50" data-aframe-inspector-original-camera="">
+ <!-- <a-camera camera="active: false" position="6.708581036335192 74.33815252100558 -32.950356687483534" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true; acceleration: 50" data-aframe-inspector-original-camera="">
   <a-entity cursor="" raycaster=""></a-entity> --&gt;
    </a-camera>
-   <!-- Camera Controls for VR -->
+   Camera Controls for VR
    <a-camera id="VR" tracked-controls="controller: 0; idPrefix: OpenVR" camera="" position="-5.288503262269081 1.6 -79.84278817410807" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera>
-
+    -->
+    
+         <!--Camera-->
+         <a-entity
+         id="player"
+         position="0 0 0"
+         camera
+         wasd-controls="acceleration: 25;"
+         look-controls="pointerLockEnabled: false"
+         >
+         <a-cursor position="0 0 -.05" scale=".04 .04 .01"></a-cursor>
+       
+        
+         <!--For Collision Detection-->
+         <a-cylinder radius="0.75"></a-cylinder>
+         </a-entity>
+ 
+       <!--Camera END-->
+  
+   <!--For Collision Detection-->
+   <a-cylinder radius="0.75"></a-cylinder>
+   </a-entity>
       <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#EF2D5E"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
@@ -71,7 +92,7 @@
 <a-sound src="assets/spacey.mp3" autoplay="true" loop="true" position="0 0 0"></a-sound>
  
 <a-entity 
-position="0 0 -200" 
+position="0 0 -20" 
 web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/Alicia_Anna_Eli_John/index.html; text:Go Next;"
        disableFrame>
 </a-entity>
