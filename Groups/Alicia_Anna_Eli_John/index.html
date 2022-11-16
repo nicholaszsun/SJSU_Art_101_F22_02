@@ -15,7 +15,17 @@
    <!-- Camera Controls for VR -->
    <!-- <a-camera id="VR" tracked-controls="controller: 0; idPrefix: OpenVR" camera="" position="0 0 0" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera> -->
 
+         <!--Camera-->
+        <a-entity
+        id="player"
+        position="0 1.6 0"
+        camera
+        wasd-controls="acceleration: 15;"
+        look-controls="pointerLockEnabled: false"
+        >
+        <a-cursor position="0 0 -.05" scale=".04 .04 .01"></a-cursor>
       
+       
         <!--For Collision Detection-->
         <a-cylinder radius="0.75"></a-cylinder>
         </a-entity>
