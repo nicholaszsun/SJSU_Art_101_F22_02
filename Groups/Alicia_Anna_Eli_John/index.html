@@ -8,12 +8,12 @@
 
     <a-scene>
       <a-sky color="#03112A" material="" geometry=""></a-sky>
-   <!-- CAMERA Controls for Computer -->
+   <!-- CAMERA Controls for Computer
  <a-camera id="camera" camera="active: true" position="0 0 0" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true; acceleration: 50" data-aframe-inspector-original-camera="">
   <a-entity cursor="" raycaster=""></a-entity> --&gt;
-   </a-camera>
+   </a-camera> -->
    <!-- Camera Controls for VR -->
-   <a-camera id="VR" tracked-controls="controller: 0; idPrefix: OpenVR" camera="" position="0 0 0" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera>
+   <!-- <a-camera id="VR" tracked-controls="controller: 0; idPrefix: OpenVR" camera="" position="0 0 0" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera> -->
 
       <!--Camera-->
         <a-entity
@@ -62,12 +62,27 @@
       
       <!--Stars-->
       
-      <a-obj-model 
-      position="0 0 0" 
-      scale="0.5 .5 .5"
-      src="assets/stars.obj" 
-      mtl="assets/stars.mtl">
-     </a-obj-model>
+      <a-gltf-model dynamic-body="" id="star1-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="20 90 450" animation="property: position; to: 40 -100 0; loop: NaN; true: 10000; from: 40 100 0; delay: 0.5" animation__2="property: rotation; to: 20 90 450; loop: NaN; dur: 950; from: 20 90 90; delay: 0.5" src="#star-glb" position="40 -100 0" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
+      </a-gltf-model>
+      <a-gltf-model dynamic-body="" id="star2-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="-0.5252516985895959 90 -187.09089793095953" animation="property: position; to: 0 -100 0; loop: true; dur: 10000; from: 0 100 0; delay: 0.5" animation__2="property: rotation; to: -20 90 -450; loop: true; dur: 950; from: 20 90 90; delay: 0.5" src="#star-glb" position="0 98.46067140592604 0" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
+      </a-gltf-model>
+      <a-gltf-model dynamic-body="" id="star3-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="20 90 274.7272652873064" animation="property: position; to: 60 -100 32; loop: true; dur: 100000; from: 60 100 30; delay: 0.5" animation__2="property: rotation; to: 20 90 450; loop: true; dur: 750; from: 20 90 90; delay: 0.5" src="#star-glb" position="0.4617985782221911 98.46067140592604 0.24629257505183527" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
+      </a-gltf-model>
+      <a-gltf-model dynamic-body="" id="star4-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="20 90 274.7272652873064" animation="property: position; to: -60 -100 -32; loop: true; dur: 10000; from: -60 100 -32; delay: 0.5" animation__2="property: rotation; to: 20 90 450; loop: true; dur: 1050; from: 20 90 90; delay: 1.5" src="#star-glb" position="-60 98.46067140592604 -32" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
+      </a-gltf-model>
+      <a-gltf-model dynamic-body="" id="star5-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="-0.5252516985895959 90 -187.09089793095953" animation="property: position; to: 30 -100 -68; loop: true; dur: 10000; from: 30 100 -60; delay: 0.5" animation__2="property: rotation; to: -20 90 -450; loop: true; dur: 950; from: 20 90 90; delay: 0.5" src="#star-glb" position="0 98.46067140592604 0" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
+      </a-gltf-model>
+      <a-gltf-model dynamic-body="" id="star6-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="-0.5252516985895959 90 -187.09089793095953" animation="property: position; to: -38 -100 12; loop: true; dur: 3000; from: -38 100 12; delay: 0.5" animation__2="property: rotation; to: -20 90 -450; loop: true; dur: 1250; from: 20 90 90; delay: 0.75" src="#star-glb" position="0 98.46067140592604 0" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
+      </a-gltf-model>
+      <a-gltf-model dynamic-body="" id="star7-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="-0.5252516985895959 90 -187.09089793095953" animation="property: position; to: -15 -100 15; loop: true; dur: 1200; from: -15 100 15; delay: 6.5" animation__2="property: rotation; to: -20 90 -450; loop: true; dur: 750; from: 20 90 90; delay: 0.75" src="#star-glb" position="0 98.46067140592604 0" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
+      </a-gltf-model>
+      <a-gltf-model dynamic-body="" id="star8-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/star.glb" scale="3 3 3" rotation="-0.5252516985895959 90 -187.09089793095953" animation="property: position; to: -15 -100 -15; loop: true; dur: 8000; from: -15 100 -15; delay: 2.5" animation__2="property: rotation; to: -20 90 -450; loop: true; dur: 850; from: 20 90 90; delay: 0.75" src="#star-glb" position="0 98.46067140592604 0" color="" height="10000" width="1000" material="" obj-model="mtl: assets/star.glb">
+      </a-gltf-model>
+      
+      
+      
+      <a-gltf-model dynamic-body="" id="starAnimated-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 100" gltf-model="assets/starAnimated.glb" scale="45 45 45" rotation="0 294.9287750420535 294.9287750420535" animation-mixer="clip: 0; duration: 850; crossFadeDuration: 0.7; loop: true" animation="to: 0 0 0; type: rotation; property: rotation; from: 0 360 360; dur: 20000" src="#starAnimated-glb" position="" color="" height="10000" width="1000" material="shader: star-test" obj-model="; mtl: assets/starAnimated.glb">
+      </a-gltf-model>
 
       <!--Stars End-->
 
@@ -85,28 +100,28 @@
        position="-12 12 -3" 
        scale="0.02 .02 .02"
        src="assets/space_rocks.obj" 
-       mtl="assets/space_rocks.mtl">
+       ">
       </a-obj-model>
 
-      <a-obj-model src="#assets/space_rocks-obj" mtl="#assets/space_rocks-mtl"></a-obj-model>
+      <a-obj-model src="#assets/space_rocks-obj" ></a-obj-model>
 
       <a-obj-model 
       position="-15 -7 -2" 
       scale="0.2 .2 .2"
       src="assets/space_rocks.obj" 
-      mtl="assets/space_rocks.mtl">
+     ">
      </a-obj-model>
 
-     <a-obj-model src="#assets/space_rocks-obj" mtl="#assets/space_rocks-mtl"></a-obj-model>
+     <a-obj-model src="#assets/space_rocks-obj" ></a-obj-model>
 
       <a-obj-model 
       position="15 -25 23" 
       scale="0.2 .2 .2"
       src="assets/space_rocks.obj" 
-      mtl="assets/space_rocks.mtl">
+      ">
      </a-obj-model>
 
-     <a-obj-model src="#assets/space_rocks-obj" mtl="#assets/space_rocks-mtl"></a-obj-model>
+     <a-obj-model src="#assets/space_rocks-obj" ></a-obj-model>
 
       <!--rock test end-->
 
