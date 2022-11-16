@@ -5,6 +5,13 @@
   </head>
   <body>
     <a-scene>
+       <!-- CAMERA Controls for Computer -->
+ <a-camera camera="active: false" position="6.708581036335192 74.33815252100558 -32.950356687483534" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true; acceleration: 50" data-aframe-inspector-original-camera="">
+  <a-entity cursor="" raycaster=""></a-entity> --&gt;
+   </a-camera>
+   <!-- Camera Controls for VR -->
+   <a-camera id="VR" tracked-controls="controller: 0; idPrefix: OpenVR" camera="" position="-5.288503262269081 1.6 -79.84278817410807" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera>
+
       <!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#EF2D5E"></a-box>
       <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
       <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
@@ -64,8 +71,8 @@
 <a-sound src="assets/spacey.mp3" autoplay="true" loop="true" position="0 0 0"></a-sound>
  
 <a-entity 
-position="0 0 -20" 
-web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups/Alicia_Anna_Eli_John/index.html; text:Home Page"
+position="0 0 -200" 
+web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/Alicia_Anna_Eli_John/index.html; text:Go Next;"
        disableFrame>
 </a-entity>
 
@@ -76,10 +83,6 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups
           <!-- <a-asset-item id="planet0-obj" src="assets/planet0.obj"></a-asset-item> -->
           <!-- <a-asset-item id="ast" src="assets/ast.obj"></a-asset-item>
           <a-asset-item id="ast-mtl" src="assets/ast.mtl"></a-asset-item> -->
-
-          <a-asset-item id="ice-obj" src="assets/icecream.obj"></a-asset-item>
-          <a-asset-item id="cherry-obj" src="assets/cherry.obj" ></a-asset-item>
-
         </a-assets>
 
         <!-- <a-obj-model src="#env-obj"></a-obj-model>
@@ -152,7 +155,7 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups
 
 
 <a-entity rotation="0 0 1080" animation="property: rotation; to: 0 0 0; loop: true; dur: 8000">
-  <a-obj-model position="5 0 -50" src="assets/s3.obj" mtl="assets/s3.mtl" material="" obj-model=""> </a-obj-model>
+  <a-obj-model position="5 0 -50" src="assets/s3.obj" mtl="" material="" obj-model=""> </a-obj-model>
 </a-entity>
 
 <a-entity rotation="0 0 0" animation="property: rotation; to: 0 0 1620; loop: true; dur: 12000">
@@ -160,7 +163,7 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups
 </a-entity>
 
 <a-entity rotation="0 0 1620" animation="property: rotation; to: 0 0 360; loop: true; dur: 5000">
-  <a-obj-model position="5 0 -200" src="assets/s4.obj" mtl="assets/s4.mtl" material="" obj-model=""> </a-obj-model>
+  <a-obj-model position="5 0 -200" src="assets/s4.obj" mtl="" material="" obj-model=""> </a-obj-model>
 </a-entity>
 
     <a-obj-model 
@@ -213,7 +216,7 @@ rotate="0 0 0"
 position="5.263 5.894 -50.965"
 animation="property: rotation; to: 360 0 360; loop: true; dur: 5000"
 src="assets/s4.obj"
-mtl="assets/s4.mtl" >
+mtl="" >
 </a-obj-model>
 
 
@@ -223,7 +226,7 @@ rotate="0 0 0"
 position="2.263 0 -100.965"
 animation="property: rotation; to: 360 0 360; loop: true; dur: 5000"
 src="assets/s4.obj"
-mtl="assets/s4.mtl" >
+mtl="" >
 </a-obj-model>
 
 
@@ -233,21 +236,9 @@ rotate="0 0 0"
 position="1.263 -5.894 -120.965"
 animation="property: rotation; to: 360 0 360; loop: true; dur: 5000"
 src="assets/s3.obj"
-mtl="assets/s3.mtl" >
+color="yellow"
+mtl="" >
 </a-obj-model>
-
-
-
-<a-mixin id="orbit" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear;"></a-mixin>
-
-<a-obj-model id="ice-obj" scale="" src="#ice-obj" position="0 2 12" color="#dca3a3" material="color: #dca3a3" obj-model="" animation="property: rotation; to: 0 360 0; loop: true; dur: 40000; easing: linear;">
-</a-obj-model>
-
-<a-entity mixin="orbit" position="0 0 12">
-  <a-obj-model id="cherry-obj" src="#cherry-obj" position="4 3 1" radius=".8" material="color: #a21616" obj-model="" scale="0.5 0.5 0.5" animation="property: rotation; to: 0 360 360; loop: true; dur: 40000; easing: linear;"></a-obj-model>
-</a-entity>
-
-
 
       </a-scene>
 
