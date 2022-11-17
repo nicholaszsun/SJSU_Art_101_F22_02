@@ -5,52 +5,40 @@
   </head>
   <body>
     <a-scene>
-       <!-- CAMERA Controls for Computer -->
- <!-- <a-camera camera="active: false" position="6.708581036335192 74.33815252100558 -32.950356687483534" rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true; acceleration: 50" data-aframe-inspector-original-camera="">
-  <a-entity cursor="" raycaster=""></a-entity> --&gt;
-   </a-camera> -->
 
-   <!-- Camera Controls for VR -->
-   <a-camera id="VR" tracked-controls="controller: 0; idPrefix: OpenVR" camera="" position="0 0 0 " rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: true" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera>
+      <a-sky src="assets/bh1.jpeg" material="" geometry="" rotation="0 300 0" position="125 150 -435"></a-sky>
+
+    <!-- Camera Controls for VR -->
+        <a-camera id="VR" tracked-controls="controller: 0; idPrefix: OpenVR" camera="" position="0 0 0 " rotation="-25.668509221860887 154.46942156726993 0" look-controls="" wasd-controls="fly: false" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera>
    
-
-         <!--Camera-->
-         <a-entity
-         id="player"
-         position="0 0 0"
-         camera
-         wasd-controls="acceleration: 25;"
-         look-controls="pointerLockEnabled: false"
-         >
-         <a-cursor position="0 0 -.05" scale=".04 .04 .01"></a-cursor>
-       
-        
-         <!--For Collision Detection-->
-         <a-cylinder radius="0.75"></a-cylinder>
-         </a-entity>
- 
-       <!--Camera END-->
-  
-   <!--For Collision Detection-->
-   <a-cylinder radius="0.75"></a-cylinder>
-   </a-entity>
-
-      
-      
-      <a-sky src="assets/bh1.jpeg" material="" geometry="" rotation="0 300 0" position="125 150 -445"></a-sky>
     
-<a-sound src="assets/spacey.mp3" autoplay="true" loop="true" position="0 0 0"></a-sound>
- 
-<a-entity 
-position="0 0 -200" 
-web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/Alicia_Anna_Eli_John/index.html; text:Go Next;"
-       disableFrame>
-</a-entity>
+         <!--Camera-->
+         <a-entity id="player" position="0 1.6 0" camera wasd-controls="acceleration: 25" look-controls="pointerLockEnabled: false">
 
+            <a-cursor position="0 0 -.05" scale=".04 .04 .01"></a-cursor>
+            <!--For Collision Detection-->
+            <!-- <a-cylinder radius="0.75"></a-cylinder> -->
+
+         </a-entity>
+
+      <!--Camera END-->
+    
+      <a-sound src="assets/spacey.mp3" autoplay="true" loop="true" position="0 0 0"></a-sound>
+ 
+      <a-entity 
+       position="0 0 -20" 
+       web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02//Groups/Alicia_Anna_Eli_John/index.html; text: Home Page;"
+       disableFrame
+       on="click">
+      </a-entity>
+
+
+<!-- <a-link id="link" href="index.html" img="https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/Alicia_Anna_Eli_John/index.html" peekMode="true" title="door 2" position="0 0 -100"></a-link> -->
 
 
         <a-assets>
-
+          <a-asset-item id="ice-obj" src="assets/icecream.obj"></a-asset-item>
+          <a-asset-item id="cherry-obj" src="assets/cherry.obj" ></a-asset-item>
         </a-assets>
 
         <a-obj-model   
@@ -114,7 +102,17 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/
         src="assets/a3.obj"
         color="yellow" >
         </a-obj-model> 
+
+
         
+        <a-mixin id="orbit" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear;"></a-mixin>
+
+        <a-obj-model id="ice-obj" scale="" src="#ice-obj" position="0 0 12" color="#dca3a3" material="color: #dca3a3" obj-model="" animation="property: rotation; to: 0 360 0; loop: true; dur: 40000; easing: linear;">
+        </a-obj-model>
+        
+        <a-entity mixin="orbit" position="0 0 12">
+          <a-obj-model id="cherry-obj" src="#cherry-obj" position="4 1 1" radius=".8" material="color: #a21616" obj-model="" scale="0.5 0.5 0.5" animation="property: rotation; to: 0 360 360; loop: true; dur: 40000; easing: linear;"></a-obj-model>
+        </a-entity>
 
 
       </a-scene>
