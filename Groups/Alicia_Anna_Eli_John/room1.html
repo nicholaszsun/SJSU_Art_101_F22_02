@@ -16,16 +16,11 @@
 
  <!-- CAMERA Controls for Computer -->
  <a-camera camera="active: true" position="0 0 0" rotation="0 0 0" look-controls="" wasd-controls="fly: true; acceleration: 50" data-aframe-inspector-original-camera="">
-  <a-entity cursor="" raycaster=""></a-entity> --&gt;
+  <a-entity cursor="" raycaster="objects: [data-raycastable]"></a-entity> --&gt;
    </a-camera>
    <!-- Camera Controls for VR -->
-   <a-camera id="VR" tracked-controls="controller: 0; idPrefix: OpenVR" camera="" position="0 0 0" rotation="0 0 0" look-controls="" wasd-controls="fly: true" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera>
+   <a-camera id="VR" tracked-controls="controller: 1; idPrefix: OpenVR" camera="" position="0 0 0" rotation="0 0 0" look-controls="" wasd-controls="fly: true" tracked-controls-webvr="idPrefix: OpenVR" data-aframe-inspector-original-camera="" visible=""></a-camera>
 
-   <a-entity 
-position="0 0 -200" 
-web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/Alicia_Anna_Eli_John/index.html; text:Go Next;"
-       disableFrame>
-</a-entity>
 
 <!-- Assets Management System -->
 <a-assets>
@@ -36,7 +31,7 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/
 </a-assets>
 
 <!-- Galaxy -->
-<a-gltf-model dynamic-body="" id="texture-glb" gltf-model="assets/texture.glb" scale="45 45 45" rotation="0 0 0" animation="property: rotation; to: 0 720 720; loop: tue; dur: 150000; from: 0 0 0; delay: 0.5" src="#texture-glb" position="0 31 -20" color="" height="10000" width="1000" material="" obj-model="mtl:">
+<a-gltf-model dynamic-body="" id="texture-glb" gltf-model="assets/texture.glb" scale="45 45 45" rotation="0 0 0" animation="property: rotation; to: 720 0 720; loop: tue; dur: 150000; from: 0 0 0; delay: 0.5" src="#texture-glb" position="0 11 -20" color="" height="10000" width="1000" material="" obj-model="mtl:">
 </a-gltf-model>
 
 <a-sky color="#03112A" material="" geometry=""></a-sky>
@@ -68,7 +63,7 @@ web-portal="url:https://sjsu-cadre-classes.github.io/SJSU_Art_101_F22_02/Groups/
 </a-gltf-model>
 
 
-<a-gltf-model dynamic-body="" id="starAnimated-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 20" gltf-model="assets/starAnimated.glb" scale="45 45 45" rotation="0 294.9287750420535 294.9287750420535" animation-mixer="clip: 0; duration: 850; crossFadeDuration: 0.7; loop: true" animation="to: 0 0 0; type: rotation; property: rotation; from: 0 720 720; dur: 20000; loop: true" src="#starAnimated-glb" position="" color="" height="10000" width="1000" material="" obj-model="mtl: assets/starAnimated.glb">
+<a-gltf-model dynamic-body="" id="starAnimated-glb" light="type: spot; intensity: 3.8; color: #ffffcc; decay: 2.94; distance: 20" gltf-model="assets/starAnimated.glb" scale="45 45 45" rotation="0 294.9287750420535 294.9287750420535" animation-mixer="clip: 0; duration: 850; crossFadeDuration: 0.7; loop: true" animation="to: 0 0 0; type: rotation; property: rotation; from: 720 720 720; dur: 20000; loop: true" src="#starAnimated-glb" position="" color="" height="10000" width="1000" material="" obj-model="mtl: assets/starAnimated.glb">
 </a-gltf-model>
 
 
